@@ -1,0 +1,22 @@
+.container {
+    box-sizing: border-box;
+    width: 95%;
+    max-width: 1530px;
+    // max-width: calc(100% - 30px * 2);
+    margin: 0 auto;
+
+    @include tablet {
+        width: 95%;
+        max-width: 1530px;
+    }
+
+    @include tablet-1200 {
+        width: 738px;
+        max-width: 100%;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
