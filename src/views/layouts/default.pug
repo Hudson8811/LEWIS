@@ -1,0 +1,27 @@
+doctype html
+
+block vars
+include ../components/mixins
+
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="css/main.css" rel="stylesheet")
+
+
+	body
+		block header
+			include ../partials/_header
+
+		main.main
+			block main
+
+		block footer
+			include ../partials/_footer
+
+		block modals
+
+		script(src="js/main.js")
+
+		block scripts
