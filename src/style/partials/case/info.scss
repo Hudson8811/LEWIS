@@ -1,0 +1,53 @@
+.info{
+    &-inner{
+        padding-left: 293px;
+    }
+    &__title{
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 110px;
+        line-height: 110%;
+        color: #F3F3F3;
+    }
+    &__line{
+        margin-top: 70px;
+    }
+    &__wrap{
+        display: flex;
+        margin-top: 150px;
+    }
+    &__list{
+        min-width: 400px;  
+        margin-right: 46px;
+        &-item{
+            margin-bottom: 67px;
+        }
+        &-subtext{
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 140%;
+            color: #F3F3F3;
+            margin-bottom: 20px;
+        }
+        &-text{
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 140%;
+            color: #F3F3F3;
+        }
+    }
+    &__text{
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 120%;
+        color: #DBDBDB;
+        width: 987px;
+    }
+}
