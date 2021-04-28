@@ -29,6 +29,7 @@
         font-size: 25px;
         line-height: 30px;
         text-transform: uppercase;
+        margin-right: 209px;
 
         i {
             font-style: italic;
@@ -72,9 +73,14 @@
         display: flex;
         justify-content: space-between;
         width: 192/400 * 100%;
+        margin-right: 168px;
 
         &-item {
             position: relative;
+
+            &:first-child {
+                margin-right: 50px;
+            }
 
             &::after {
                 content: '';
