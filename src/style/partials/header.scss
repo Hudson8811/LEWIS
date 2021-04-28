@@ -1,0 +1,28 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    &__wrapper {}
+
+    &__left-inner {}
+
+    &__logo-wrapper {}
+
+    &__logo {}
+
+    &__author-mail {}
+
+    &__right-inner {}
+
+    &__social {
+        &-item {}
+
+        &-link {}
+    }
+
+    &__menu {}
+
+}

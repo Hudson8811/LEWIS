@@ -1,7 +1,11 @@
     @import 'helpers/reset.scss';
     @import 'helpers/_mixins.scss';
     @import 'helpers/setting.scss';
+    @import 'helpers/layout.scss';
     @import 'helpers/fonts.scss';
+    @import 'libs/jquery.pagepiling.min.css';
+
+    @import 'partials/header.scss';
     @import 'partials/main/first.scss';
     @import 'partials/case/hero.scss';
     @import 'partials/case/info.scss';

@@ -1,4 +1,4 @@
-extends layouts/default
+extends layouts/layout
 
 block vars
 	-
@@ -8,4 +8,10 @@ block vars
 
 
 block main
-	h1 Hello LEWIS!
+	div#pagepiling
+		div.section 
+			include components/first
+
+		div.section Какой-то раздел
+		div.section Какой-то раздел
+		div.section Какой-то раздел
