@@ -22,15 +22,15 @@
     }
 
     &__list {
-        min-width: 400px;
+        // min-width: 400px;
         margin-right: 46px;
+        flex-basis: calc(72% - 431px);
 
         &-item {
             margin-bottom: 67px;
         }
 
         &-subtext {
-            font-family: SF Pro Display;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
@@ -40,7 +40,6 @@
         }
 
         &-text {
-            font-family: SF Pro Display;
             font-style: normal;
             font-weight: normal;
             font-size: 22px;
@@ -56,6 +55,7 @@
         font-size: 40px;
         line-height: 120%;
         color: #DBDBDB;
-        width: 987px;
+        flex-basis: 100%;
+        // width: 987px;
     }
 }

@@ -3,7 +3,6 @@
     &__img{
         &-wrap{
             display: flex;
-            margin-bottom: 200px;
             height: 800px;
             &:not(:last-child){
                 margin-top: 70px;
@@ -25,17 +24,28 @@
             &--mr-36{
                 margin-right: 36px;
             }
+            &--fb-72{
+                flex-basis: 72%;
+            }
         }
     }
     &__text{
-        font-family: 'SF Pro Display';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 22px;
-        line-height: 140%;
-        color: #DBDBDB;
-        width: 880px;
-        margin-left: auto;
-        margin-top: 200px;
+        &-wrap{
+            display: flex;
+        }
+        &-text{
+                font-family: 'SF Pro Display';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 22px;
+                line-height: 140%;
+                color: #DBDBDB;
+                flex-basis: 100%;
+                margin-top: 200px;
+        }
+        &-block{
+            flex-basis: 72%;
+            margin-right: 46px;
+        }
     }
 }
