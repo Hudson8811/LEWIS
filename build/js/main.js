@@ -36,7 +36,7 @@
 
 /* Partials */
 
-$('h1').text('jquery')
+
 $(document).ready(function () {
     // $('#pagepiling').pagepiling({
     //     menu: null,
