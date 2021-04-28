@@ -1,0 +1,44 @@
+.nav-widget {
+    position: fixed;
+    z-index: 100;
+    left: 70px;
+    top: 200px;
+    height: 70vh;
+
+    &__wrapper {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 750/1080 * 100%;
+
+        &-gold {
+            height: 20%;
+            background-color: #E9CF49;
+            width: 2px;
+        }
+
+        &-white {
+            height: 80%;
+            background-color: $white-main;
+            width: 2px;
+        }
+    }
+
+    &__name-page {
+        transform: rotate(-90deg);
+
+    }
+
+    &__name-number {
+        transform: rotate(-90deg);
+        display: flex;
+        justify-content: flex-end;
+    }
+}
