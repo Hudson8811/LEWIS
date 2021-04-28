@@ -28,8 +28,7 @@ var path = {
 	src: {
 		html: 'src/views/*.pug',
 		js: 'src/js/main.js',
-		style: 'src/style/main.scss',
-		style: 'src/style/main2.scss',
+		style: ['src/style/main.scss', 'src/style/main2.scss'],
 		images: 'src/images/**/*.*',
 		img: 'src/img/**/*.*',
 		fonts: 'src/fonts/**/*.*'

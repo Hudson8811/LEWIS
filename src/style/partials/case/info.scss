@@ -1,8 +1,9 @@
-.info{
-    &-inner{
+.info {
+    &-inner {
         padding-left: 293px;
     }
-    &__title{
+
+    &__title {
         font-family: 'SF Pro Display';
         font-style: normal;
         font-weight: normal;
@@ -10,20 +11,25 @@
         line-height: 110%;
         color: #F3F3F3;
     }
-    &__line{
+
+    &__line {
         margin-top: 70px;
     }
-    &__wrap{
+
+    &__wrap {
         display: flex;
         margin-top: 150px;
     }
-    &__list{
-        min-width: 400px;  
+
+    &__list {
+        min-width: 400px;
         margin-right: 46px;
-        &-item{
+
+        &-item {
             margin-bottom: 67px;
         }
-        &-subtext{
+
+        &-subtext {
             font-family: SF Pro Display;
             font-style: normal;
             font-weight: normal;
@@ -32,7 +38,8 @@
             color: #F3F3F3;
             margin-bottom: 20px;
         }
-        &-text{
+
+        &-text {
             font-family: SF Pro Display;
             font-style: normal;
             font-weight: normal;
@@ -41,7 +48,8 @@
             color: #F3F3F3;
         }
     }
-    &__text{
+
+    &__text {
         font-family: 'SF Pro Display';
         font-style: normal;
         font-weight: normal;

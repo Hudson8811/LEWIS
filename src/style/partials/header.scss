@@ -6,11 +6,16 @@
     width: 100%;
 
     &__wrapper {
+        width: 100%;
+        padding: 40px 100px;
         display: flex;
     }
 
     &__left-inner {
+        width: 100%;
         display: flex;
+        width: 474/1920 * 100%;
+        justify-content: space-between;
     }
 
     &__logo-wrapper {}
@@ -21,9 +26,14 @@
 
     &__right-inner {
         display: flex;
+        width: 100%;
     }
 
     &__social {
+        width: 192/1920 * 100%;
+        display: flex;
+        justify-content: space-between;
+
         &-item {}
 
         &-link {}
