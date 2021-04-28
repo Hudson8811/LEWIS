@@ -4,12 +4,15 @@
     left: 0;
     right: 0;
     width: 100%;
+    font-size: 18px;
+    line-height: 140%;
 
     &__wrapper {
         width: 100%;
         padding: 40px 100px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__left-inner {
@@ -20,9 +23,43 @@
 
     &__logo-wrapper {}
 
-    &__logo {}
+    &__logo {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        text-transform: uppercase;
 
-    &__author-mail {}
+        i {
+            font-style: italic;
+            padding-right: 3px;
+
+            span {
+                color: blue;
+            }
+        }
+    }
+
+    &__author-mail {
+        position: relative;
+        transition: .3s ease;
+
+        &::after {
+            transition: .3s ease;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            height: 1px;
+            background-color: transparent;
+        }
+
+        &:hover {
+            &::after {
+                right: 0;
+                background-color: $white-main;
+            }
+        }
+    }
 
     &__right-inner {
         width: 400/1920 * 100%;
@@ -35,16 +72,43 @@
         justify-content: space-between;
         width: 192/400 * 100%;
 
-        &-item {}
+        &-item {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                transition: .3s ease;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                background-color: transparent;
+            }
+
+            &:hover {
+                &::after {
+                    right: 0;
+                    background-color: $white-main;
+                }
+            }
+        }
 
         &-link {}
     }
 
     &__burger {
-        position: relative;
         width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         span {
+            position: relative;
+            width: 40px;
+            height: 10px;
+            display: block;
+            transition: .3s;
+
 
             &::before,
             &::after {
@@ -54,7 +118,7 @@
                 height: 2px;
                 background-color: #F3F3F3;
                 position: absolute;
-
+                background-color: $white-main;
             }
 
             &::after {
@@ -63,6 +127,115 @@
 
             &::before {
                 bottom: 0;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #1F1F1F;
+        width: 647/1920 * 100%;
+        height: 100vh;
+        font-size: 40px;
+        line-height: 120%;
+        color: $gray;
+        transition: .3s;
+        transform: translateX(100%);
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        &-content {
+            position: relative;
+            padding-top: 10%;
+            padding-left: 7%;
+            height: 100%;
+        }
+
+        &-exit {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 27px;
+            right: 80px;
+            transition: .3s ease;
+            cursor: pointer;
+            z-index: 3;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                left: 20px;
+                display: block;
+                height: 40px;
+                width: 2px;
+                background-color: $white-main;
+            }
+
+            &::after {
+                transform: rotate(45deg);
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+            }
+
+
+        }
+
+        &-item {
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
+
+        &-link {
+            transition: .3s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                transition: .3s ease;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                background-color: transparent;
+            }
+
+            &:hover {
+                color: $white-main;
+
+                &::after {
+                    right: 0;
+                    background-color: $white-main;
+                }
+            }
+        }
+
+        &-contacts {
+            font-size: 18px;
+            line-height: 140%;
+            color: $white-main;
+            position: absolute;
+            bottom: 60px;
+            right: 90px;
+        }
+
+        &-contact {
+            &:last-child {
+                margin-top: 7px;
             }
         }
     }
