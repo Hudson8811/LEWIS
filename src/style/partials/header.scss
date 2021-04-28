@@ -5,9 +5,13 @@
     right: 0;
     width: 100%;
 
-    &__wrapper {}
+    &__wrapper {
+        display: flex;
+    }
 
-    &__left-inner {}
+    &__left-inner {
+        display: flex;
+    }
 
     &__logo-wrapper {}
 
@@ -15,7 +19,9 @@
 
     &__author-mail {}
 
-    &__right-inner {}
+    &__right-inner {
+        display: flex;
+    }
 
     &__social {
         &-item {}
