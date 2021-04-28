@@ -8,10 +8,12 @@ body {
     max-width: 1530px;
     // max-width: calc(100% - 30px * 2);
     margin: 0 auto;
-    &-fluid{
-        max-width: calk(100%-200px);
+
+    &-fluid {
+        max-width: calc(100% - 200px);
         margin: auto;
     }
+
     @include tablet {
         width: 95%;
         max-width: 1530px;

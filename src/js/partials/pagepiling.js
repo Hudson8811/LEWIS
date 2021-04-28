@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     $('#pagepiling').pagepiling({
         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'red'],
+        sectionsColor: ['#000', '#000', '#000', '#000   '],
         verticalCentered: true,
     });
 });

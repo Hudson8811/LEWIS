@@ -1,12 +1,15 @@
-.container{
+.container {
     max-width: calc(100% - 200px);
     margin: auto;
 }
-.line{
+
+.line {
     height: 2px;
     background: #787A7C;
     width: 100%;
 }
-body{
+
+body {
     background: #000;
+    color: $white-main;
 }
