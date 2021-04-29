@@ -23,8 +23,8 @@ input[type="checkbox"]:not(:checked) + label:before{
     top: 0px;
     width: 18px;
     height: 18px;
-    border: 1px solid #303535;
-    background-color: #303535;
+    border: 1px solid #ffffff;
+    background-color: transparent;
 }
 
 
@@ -50,8 +50,8 @@ input[type="checkbox"]:not(:checked) + label:after{
     width: 10px;
     height: 5px;
     border-radius: 1px;
-    border-left: 4px solid #fcd977;
-    border-bottom: 4px solid #fcd977;
+    border-left: 4px solid #e9cf49;
+    border-bottom: 4px solid #e9cf49;
     transform: rotate(-45deg);
 }
 input[type="checkbox"]:not(:checked) + label:after{
