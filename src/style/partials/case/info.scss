@@ -1,6 +1,9 @@
 .info {
     &-inner {
         padding-left: 293px;
+        @include tablet{
+        padding-left: 0;
+        }
     }
 
     &__title {
@@ -10,6 +13,12 @@
         font-size: 110px;
         line-height: 110%;
         color: #F3F3F3;
+        @include mobile{
+            font-size: 88px;
+        }
+        @include mobile-520{
+            font-size: 60px;
+        }
     }
 
     &__line {
@@ -19,6 +28,9 @@
     &__wrap {
         display: flex;
         margin-top: 150px;
+        @include tablet-1200{
+            flex-direction: column;
+        }
     }
 
     &__list {
@@ -49,13 +61,17 @@
     }
 
     &__text {
-        font-family: 'SF Pro Display';
         font-style: normal;
         font-weight: normal;
         font-size: 40px;
         line-height: 120%;
         color: #DBDBDB;
         flex-basis: 100%;
-        // width: 987px;
+        @include tablet-1200{
+            font-size: 32px;
+        }
+        @include mobile-520{
+            font-size: 22px;
+        }
     }
 }

@@ -12,6 +12,9 @@ body {
     &-fluid {
         max-width: calc(100% - 200px);
         margin: auto;
+        @include mobile{
+        max-width: calc(100% - 50px);
+        }
     }
 
     @include tablet {

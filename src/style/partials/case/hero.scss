@@ -1,5 +1,8 @@
 .hero{
     padding-top: 200px;
+    @include tablet-1200{
+        padding-top: 50px;
+    }
     &__img{
         &-wrap{
             display: flex;
@@ -7,11 +10,19 @@
             &:not(:last-child){
                 margin-top: 70px;
             }
+            @include tablet-1200{
+                flex-direction: column;
+                height: auto;
+            }
         }
         &-wrapper{
             display: flex;
             height: 430px;
             margin-top: 70px;
+            @include tablet-1200{
+                flex-direction: column;
+                height: auto;
+            }
             
         }
         &-img{
@@ -20,12 +31,26 @@
             object-fit: cover;
             &--mr-46{
                 margin-right: 46px;
+                @include tablet-1200{
+                    margin-right: 0;
+                }   
             }
             &--mr-36{
                 margin-right: 36px;
+                @include tablet-1200{
+                    margin-right: 0;
+                }
             }
             &--fb-72{
                 flex-basis: 72%;
+                @include tablet-1200{
+                    flex-basis: 100%;
+                }
+            }
+            &--mt-30{
+                @include tablet-1200{
+                    margin-top: 30px;
+                }
             }
         }
     }
@@ -42,10 +67,16 @@
                 color: #DBDBDB;
                 flex-basis: 100%;
                 margin-top: 200px;
+                @include tablet-1200{
+                    margin-top: 50px;
+                }
         }
         &-block{
             flex-basis: 72%;
             margin-right: 46px;
+            @include tablet{
+                display: none;
+            }
         }
     }
 }
