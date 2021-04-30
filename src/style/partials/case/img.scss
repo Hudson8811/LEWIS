@@ -6,4 +6,7 @@
         max-height: 800px;
         object-fit: cover;
     }
+    @include tablet-1200{
+        padding-bottom: 50px;
+    }
 }

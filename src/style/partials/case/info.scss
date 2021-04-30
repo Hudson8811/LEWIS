@@ -23,6 +23,9 @@
 
     &__line {
         margin-top: 70px;
+        @include tablet{
+            margin-top: 35px;
+        }
     }
 
     &__wrap {
@@ -30,16 +33,24 @@
         margin-top: 150px;
         @include tablet-1200{
             flex-direction: column;
+            margin-top: 75px;
         }
     }
 
     &__list {
-        // min-width: 400px;
         margin-right: 46px;
-        flex-basis: calc(72% - 431px);
+        width: calc(72% - 431px);
+        @include tablet-1200{
+            width: 100%;
+        }
 
         &-item {
-            margin-bottom: 67px;
+            &:not(:first-child){
+                margin-top: 67px;
+                @include tablet-992{
+                    margin-top: 30px;
+                }
+            }
         }
 
         &-subtext {
@@ -66,12 +77,15 @@
         font-size: 40px;
         line-height: 120%;
         color: #DBDBDB;
-        flex-basis: 100%;
-        @include tablet-1200{
+        width: 100%;
+        @include tablet{
             font-size: 32px;
         }
-        @include mobile-520{
-            font-size: 22px;
+        @include tablet-1200{
+            margin-top: 40px;
+        }
+        @include mobile-620{
+            font-size: 26px;
         }
     }
 }

@@ -27,6 +27,9 @@
                 margin-top: 70px;
             }
         }
+        @include tablet-1200{
+            margin-top: 40px;
+        }
     }
     &__title{
         font-style: normal;
@@ -53,6 +56,12 @@
         color: $white-secodary;
         max-width: 840px;
         margin-top: 70px;
+        @include tablet-1200{
+            margin-top: 35px;
+        }
+        @include mobile-620{
+            font-size: 20px;
+        }
         &--big{
             font-style: normal;
             font-weight: normal;
@@ -60,23 +69,31 @@
             line-height: 120%;
             margin-top: 150px;
             max-width: 1134px;
+            @include tablet-1200{
+                margin-top: 75px;
+                @include mobile-620{
+                    margin-top: 35px;
+                }
+            }
             @include mobile{
                 font-size: 35px;
-                margin-top: 100px;
             }
             @include mobile-520{
-                font-size: 25px;
+                font-size: 25px; 
             }
             &--mt{
                 &-70{
                     margin-top: 70px;
+                    @include mobile-620{
+                        margin-top: 35px;
+                    }
                 }
             }
         }
         &--mt{
             &-120{
                 margin-top: 120px;
-                @include mobile-520{
+                @include tablet-1200{
                     margin-top: 60px;
                 }
             }
@@ -91,27 +108,34 @@
         &--mt{
             &-120{
                 margin-top: 120px;
-                @include mobile-520{
+                @include tablet-1200{
                     margin-top: 60px;
                 }
             }
             &-20{
-                margin-top: 20px;
+                @include mobile-620{
+                    margin-top: 20px;
+                }
             }
         }
         &-wrap{
             display: flex;
             max-height: 430px;
             margin-top: 120px;
+            @include tablet-1200{
+                margin-top: 60px;
+            }
             @include mobile-620{
                 flex-direction: column;
                 max-height: max-content;
-                margin-top: 60px;
             }
         }
     }
     &__more{
         margin-top: 150px;
+        @include tablet-1200{
+            margin-top: 75px;
+        }
     }
     &-more{
         &__author{
@@ -148,6 +172,9 @@
     &-comments{
         &__item{
             margin-top: 100px;
+            @include mobile-620{
+                margin-top: 50px;
+            }
         }
         &__title{
             font-style: normal;
@@ -156,8 +183,10 @@
             line-height: 110%;
             color: $white-main;
             margin-top: 200px;
-            @include mobile{
+            @include tablet-1200{
                 margin-top: 100px;
+            }
+            @include mobile{
                 font-size: 50px;
             }
         }
@@ -168,12 +197,21 @@
             line-height: 120%;
             color: $white-main;
             margin-top: 200px;
+            @include tablet-1200{
+                margin-top: 100px;
+            }
         }
         &__wrap{
             margin-top: 150px;
+            @include tablet-1200{
+                margin-top: 75px;
+            }
         }
         &__form{
             margin-top: 130px;
+            @include tablet-1200{
+                margin-top: 65px;
+            }
         }
     }
 }
@@ -195,17 +233,16 @@
         background: $blue;
         &:not(:last-child){
             margin-right: 20px;
-            @include mobile-520{
-                margin-right: 0;
+            @include mobile-450{
+                margin-right: 10px;
             }
         }
         &:hover{
             opacity: .7;
         }
-        @include mobile-520{
-            flex-basis: 34%;
+        @include mobile-450{
+            // width: 34%;
             margin-bottom: 20px;
-            width: 34px;
         }
     }
 }
@@ -220,7 +257,6 @@
     }
     @include mobile-450{
         position: relative;
-        z-index: -1;
     }
     &--reply{
         margin-left: 150px;
@@ -304,9 +340,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            @include tablet-1200{
-                flex-direction: column;
-            }
+            
         }
         &__input{
             background: transparent;
@@ -316,15 +350,15 @@
             line-height: 140%;
             color: $white-main;
             border-bottom: 1px solid $gray;
-            min-width: 400px;
+            max-width: 400px;
             padding-bottom: 20px;
+            width: 100%;
             @include mobile-450{
                 min-width: auto;
             }
             @include tablet-1200{
-                width: 100%;
-                &:last-child{
-                    margin-top: 30px;
+                &:first-child{
+                    margin-right: 30px;
                 }
             }
         }

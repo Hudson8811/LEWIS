@@ -1,18 +1,42 @@
 .hero{
     padding-top: 200px;
+    @include tablet{
+        padding-top: 70px;
+    }
     @include tablet-1200{
         padding-top: 50px;
     }
     &__img{
         &-wrap{
             display: flex;
-            height: 800px;
-            &:not(:last-child){
+            height: 700px;
+            &:not(:first-child){
                 margin-top: 70px;
+                @include tablet-992{
+                    margin-top: 35px;
+                }
+            }
+            &:first-child{
+                height: 800px;
+                @include tablet-1200{
+                    height: 500px;
+                }
+                @include tablet-992{
+                    height: 400px;
+                }
+                @include mobile-620{
+                    height: 300px;
+                }
+                @include mobile-520{
+                    flex-direction: column;
+                    height: auto;
+                }
             }
             @include tablet-1200{
-                flex-direction: column;
-                height: auto;
+                height: 500px;
+            }
+            @include mobile-620{
+                height: 300px;
             }
         }
         &-wrapper{
@@ -20,8 +44,27 @@
             height: 430px;
             margin-top: 70px;
             @include tablet-1200{
-                flex-direction: column;
+                height: 300px;
+            }
+            @include tablet-992{
+                height: 190px;
+            }
+            @include mobile-620{
                 height: auto;
+                flex-direction: column;
+                margin-top: 35px;
+            }
+            >img{
+                @include mobile-620{
+                    width: 70%;
+                    margin: auto;
+                    &:not(:first-child){
+                        margin-top: 15px;
+                    }
+                }
+                @include mobile-450{
+                    width: 100%;
+                }
             }
             
         }
@@ -32,24 +75,30 @@
             &--mr-46{
                 margin-right: 46px;
                 @include tablet-1200{
-                    margin-right: 0;
+                    margin-right: 23px;
                 }   
+                @include mobile-520{
+                    margin-right: 0;
+                }
             }
             &--mr-36{
                 margin-right: 36px;
                 @include tablet-1200{
+                    margin-right: 15px;
+                }
+                @include mobile-620{
                     margin-right: 0;
                 }
             }
             &--fb-72{
-                flex-basis: 72%;
-                @include tablet-1200{
-                    flex-basis: 100%;
+                width: 72%;
+                @include mobile-620{
+                    width: 100%;
                 }
             }
             &--mt-30{
-                @include tablet-1200{
-                    margin-top: 30px;
+                @include mobile-520{
+                    margin-top: 15px;
                 }
             }
         }
@@ -65,14 +114,17 @@
                 font-size: 22px;
                 line-height: 140%;
                 color: #DBDBDB;
-                flex-basis: 100%;
+                width: 100%;
                 margin-top: 200px;
+                @include tablet{
+                    margin-top: 100px;
+                }
                 @include tablet-1200{
                     margin-top: 50px;
                 }
         }
         &-block{
-            flex-basis: 72%;
+            width: 72%;
             margin-right: 46px;
             @include tablet{
                 display: none;
