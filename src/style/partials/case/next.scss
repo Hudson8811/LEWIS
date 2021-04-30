@@ -16,7 +16,6 @@
         }
     }
     &__title{
-        font-family: 'SF Pro Display';
         font-style: normal;
         font-weight: 300;
         font-size: 40px;
@@ -51,6 +50,7 @@
             z-index: 10;
             top: 50%;
             left: 150px;
+            right: 275px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -63,7 +63,6 @@
             }
         }
         &-name{
-            font-family: 'SF Pro Display';
             font-style: normal;
             font-weight: 300;
             font-size: 70px;
@@ -74,6 +73,14 @@
             }
             @include mobile-450{
                 font-size: 32px;
+            }
+        }
+        &-button{
+            cursor: pointer;
+            transition: .3s ease;
+            transform: rotate(0deg);
+            &:hover{
+                transform: rotate(-90deg);
             }
         }
     }
