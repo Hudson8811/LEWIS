@@ -32,7 +32,7 @@ $(document).ready(function () {
     $('#pagepiling').pagepiling({
         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
         sectionsColor: ['#000', '#000', '#000', '#000   '],
-        verticalCentered: true,
+        verticalCentered: false,
     });
 });
 
