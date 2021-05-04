@@ -5,7 +5,14 @@
         padding-left: 0;
         }
     }
-
+    &__wrapper{
+        width: 100%;
+        &-list{
+            width: calc(73% - 436px);
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
     &__title {
         font-style: normal;
         font-weight: normal;
@@ -38,7 +45,8 @@
 
     &__list {
         margin-right: 46px;
-        width: calc(72% - 431px);
+        max-width: 400px;
+        width: 100%;
         @include tablet-1200{
             width: 100%;
         }
@@ -77,6 +85,7 @@
         line-height: 120%;
         color: #DBDBDB;
         width: 100%;
+        max-width: 987px;
         @include tablet{
             font-size: 32px;
         }
@@ -88,3 +97,4 @@
         }
     }
 }
+

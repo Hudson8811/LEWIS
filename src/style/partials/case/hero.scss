@@ -116,6 +116,8 @@
                 color: #DBDBDB;
                 width: 100%;
                 margin-top: 200px;
+                max-width: 880px;
+                margin-right: auto;
                 @include tablet{
                     margin-top: 100px;
                 }
@@ -124,7 +126,7 @@
                 }
         }
         &-block{
-            width: 72%;
+            width: 41%;
             margin-right: 46px;
             @include tablet{
                 display: none;
