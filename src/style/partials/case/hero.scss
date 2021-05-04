@@ -90,10 +90,28 @@
                     margin-right: 0;
                 }
             }
-            &--fb-72{
-                width: 72%;
+            &--w-57{
+                width: 57%;
                 @include mobile-620{
+                    width: 50%;
+                }
+                @include mobile-520{
                     width: 100%;
+                }
+            }
+            &--fb-72{
+                width: calc(43% - 23px);
+                @include mobile-620{
+                    width: 50%;
+                }
+                @include mobile-520{
+                    width: 100%;
+                }
+            }
+            &--w-33{
+                width: calc(33.333333% - 24px);
+                @include tablet-1200{
+                    width: calc(33.333333% - 10px);
                 }
             }
             &--mt-30{
@@ -126,7 +144,7 @@
                 }
         }
         &-block{
-            width: 41%;
+            width: 42%;
             margin-right: 46px;
             @include tablet{
                 display: none;
