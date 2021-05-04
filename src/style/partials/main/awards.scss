@@ -1,0 +1,130 @@
+.awards {
+    @include tablet-1200 {
+        padding-top: 120px;
+    }
+
+    &__container {}
+
+    &__title {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 70px;
+        line-height: 110%;
+        color: #F3F3F3;
+
+        @include tablet-1200 {
+            text-align: center;
+            font-size: 48px;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__awards {
+        margin-top: 100px;
+
+        @include tablet {
+            margin-top: 50px;
+
+        }
+
+        @include tablet-1200 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+    }
+
+    &__award {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: SF Pro Display;
+        line-height: 140%;
+
+        @include tablet-1200 {
+            padding-top: 0;
+        }
+
+        @include tablet-1200 {
+            width: 50%;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #787A7C;
+
+            @include tablet-1200 {
+                border-bottom-width: 0;
+            }
+        }
+    }
+
+    &__award-img {
+        padding-right: 10%;
+
+        @include tablet {
+            padding-right: 5%;
+        }
+
+        @include tablet-1200 {
+            padding-right: 0;
+        }
+    }
+
+    &__award-title {
+        font-size: 40px;
+        line-height: 120%;
+        color: #F3F3F3;
+        width: 45%;
+        display: flex;
+        justify-content: flex-start;
+
+        @include tablet {
+            font-size: 28px;
+            width: 45%;
+        }
+
+        @include tablet-1200 {
+            margin-top: 15px;
+            width: auto;
+        }
+    }
+
+    &__award-name {
+        font-size: 18px;
+        color: #F3F3F3;
+        width: 10%;
+        display: flex;
+        justify-content: flex-start;
+
+        @include tablet {
+            width: 15%;
+        }
+
+        @include tablet-1200 {
+            margin-top: 15px;
+
+            width: auto;
+        }
+    }
+
+    &__award-date {
+        font-size: 18px;
+        color: #F3F3F3;
+        margin-left: auto;
+
+        @include tablet-1200 {
+            margin-top: 15px;
+
+            margin-left: 0;
+        }
+    }
+}

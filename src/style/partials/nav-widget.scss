@@ -1,15 +1,27 @@
 .nav-widget {
     position: fixed;
-    z-index: 100;
+    z-index: 9;
     left: 70px;
     top: 200px;
     height: 70vh;
+
+    @include height-550 {
+        top: 150px;
+    }
+
+    @include tablet-992 {
+        left: 0px;
+        top: 150px;
+    }
+
+    @include mobile-620 {
+        top: 120px;
+    }
 
     &__wrapper {
         height: 70vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     &__line {
@@ -17,6 +29,11 @@
         flex-direction: column;
         align-items: center;
         height: 850/1080 * 100%;
+        padding: 20px 0;
+
+        @include height-420 {
+            height: 65%;
+        }
 
         &-gold {
             height: 20%;
@@ -28,6 +45,8 @@
             height: 80%;
             background-color: $white-main;
             width: 2px;
+            margin-bottom: 20px;
+
         }
     }
 

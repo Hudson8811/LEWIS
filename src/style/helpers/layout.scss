@@ -2,17 +2,47 @@ body {
     font-family: "SF Pro Display";
 }
 
+.section-main {
+    padding-left: vwd(393);
+    padding-top: vwd(193);
+    padding-right: vwd(100);
+    padding-bottom: vwd(90);
+
+    @include tablet {
+        padding-top: 160px;
+        padding-left: 160px;
+    }
+
+    @include tablet-992 {
+        padding-top: 120px;
+        padding-left: 70px;
+    }
+
+    @include mobile-620 {
+        padding-left: 55px;
+        padding-top: 90px;
+    }
+}
+
 .container {
+    &-main {
+        max-width: 1500px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
     box-sizing: border-box;
     width: 95%;
     max-width: 1530px;
     // max-width: calc(100% - 30px * 2);
     margin: 0 auto;
+
     &-fluid {
         max-width: calc(100% - 200px);
         margin: auto;
-        @include mobile{
-        max-width: calc(100% - 50px);
+
+        @include mobile {
+            max-width: calc(100% - 50px);
         }
     }
 

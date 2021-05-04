@@ -1,0 +1,46 @@
+.partners {
+
+    &__container {}
+
+    &__title {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 70px;
+        line-height: 110%;
+        color: #F3F3F3;
+        width: 840/1427 * 100%;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 116px;
+    }
+
+    &__img-wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 200/1427 * 100%;
+    }
+
+    &__img {}
+
+    &__partners {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1085/1427 * 100%;
+    }
+
+    &__partner {
+        width: 33.333333%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 46px;
+    }
+
+    &__partner-img {}
+}

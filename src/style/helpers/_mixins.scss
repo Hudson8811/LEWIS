@@ -46,6 +46,19 @@
     }
 }
 
+// Height
+
+@mixin height-550 {
+    @media (max-height: 550px) {
+        @content;
+    }
+}
+
+@mixin height-420 {
+    @media (max-height: 420px) {
+        @content;
+    }
+}
 
 @mixin resize-img-wrapper {
     position: relative;
@@ -68,6 +81,40 @@
     object-position: center;
 }
 
+$resolutiond: 1920;
+
+
+@function vwd($px) {
+    @return (($px/$resolutiond) * 100)+vw;
+}
+
+@function vwx($px) {
+    @return (($px/$resolutiond) * 80)+vw;
+}
+
+@function novwx($px) {
+    @return ($px)+px;
+}
+
+
+
+$resolution: 375;
+
+
 @function vw($px) {
     @return (($px/$resolution) * 100)+vw;
+}
+
+
+$resolutiond2: 1200;
+
+@function qw($px) {
+    @return (($px/$resolutiond2) * 80)+vw;
+}
+
+
+$resolutiond3: 1110;
+
+@function qw2($px) {
+    @return (($px/$resolutiond3) * 100)+vw;
 }

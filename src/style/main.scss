@@ -5,8 +5,15 @@
     @import 'helpers/layout.scss';
     @import 'helpers/fonts.scss';
     @import 'libs/jquery.pagepiling.min.css';
+    @import 'libs/swiper.min.scss';
+
 
     @import 'partials/main/home.scss';
     @import 'partials/main/about.scss';
+    @import 'partials/main/services.scss';
+    @import 'partials/main/partners.scss';
+    @import 'partials/main/awards.scss';
+    @import 'partials/main/testimonials.scss';
+
     @import 'partials/header.scss';
     @import 'partials/nav-widget.scss';

@@ -1,0 +1,111 @@
+.testimonials {
+
+    &__container {}
+
+    &__title {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 70px;
+        line-height: 110%;
+        color: #F3F3F3;
+        width: 840/1427 * 100%;
+    }
+
+    &__content {}
+
+    &__swiper-container {
+        width: 900px;
+        height: 600px;
+        margin-top: 120px;
+        position: relative;
+    }
+
+    &__swiper-content {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    &__swiper-text {
+        font-size: 22px;
+        line-height: 140%;
+        color: #F3F3F3;
+    }
+
+    &__swiper-author {
+        font-size: 40px;
+        line-height: 120%;
+        color: #F3F3F3;
+        margin-top: 70px;
+    }
+
+    &__swiper-author-info {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 140%;
+        color: #F3F3F3;
+        margin-top: 20px;
+
+    }
+
+    &__swiper-author-social {}
+
+    &__swiper-author-social-item {}
+
+    &__swiper-wrapper {
+        position: relative;
+    }
+
+    &__swiper-slide {}
+
+    &__swiper-pagination {}
+
+    &__swiper-button-prev {
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+        top: 92%;
+        left: 85%;
+        width: 50px;
+        height: 50px;
+
+        &::after {
+            content: '';
+        }
+    }
+
+    &__swiper-button-next {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 92%;
+        width: 50px;
+        height: 50px;
+
+        &::after {
+            content: '';
+        }
+    }
+
+    &__swiper-scrollbar {}
+}
+
+.container-main {}
+
+.swiper-container {
+    position: relative;
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.swiper-scrollbar {}
