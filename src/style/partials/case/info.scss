@@ -11,6 +11,10 @@
             width: calc(73% - 366px);
             display: flex;
             justify-content: flex-end;
+            @include tablet-1200{
+                width: 100%;
+                justify-content: flex-start;
+            }
         }
     }
     &__title {

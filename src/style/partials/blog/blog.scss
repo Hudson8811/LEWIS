@@ -1,6 +1,11 @@
 .blog{
     padding-left: 293px;
     padding-bottom: 250px;
+    &-bg{
+        background-image: url(../img/blog/blog-page.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
     &__inner{
         max-width: 1348px;
         margin: auto;
@@ -126,6 +131,13 @@
             display: flex;
             max-height: 430px;
             margin-top: 120px;
+            >img{
+                width: calc(49% - 13px);
+                @include mobile-620{
+                    width: 100%;
+                }
+            }
+
             @include tablet-1200{
                 margin-top: 60px;
             }
