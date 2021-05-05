@@ -10,6 +10,11 @@
         line-height: 110%;
         color: #F3F3F3;
         width: 840/1427 * 100%;
+
+        @include tablet-1200 {
+            font-size: 54px;
+            width: 80%;
+        }
     }
 
     &__row {
@@ -17,6 +22,14 @@
         justify-content: space-between;
         width: 100%;
         margin-top: 116px;
+
+        @include tablet {
+            margin-top: 70px;
+        }
+
+        @include tablet-1200 {
+            margin-top: 25px;
+        }
     }
 
     &__img-wrapper {
