@@ -4,12 +4,13 @@ body {
 
 .section-main {
     padding-left: vwd(393);
-    padding-top: vwd(193);
+    padding-top: toVh(193);
     padding-right: vwd(100);
-    padding-bottom: vwd(90);
+    padding-bottom: toVh(90);
+    height: 100vh;
 
     @include tablet {
-        padding-top: 160px;
+        padding-top: toVh(170);
         padding-left: 160px;
     }
 

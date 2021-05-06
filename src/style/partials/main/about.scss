@@ -1,13 +1,9 @@
 .about {
-    // @include tablet-1200 {
-    //     padding-top: 150px;
-    //     padding-left: 150px;
-    // }
-
-    // @include mobile-620 {
-    //     padding-top: 80px;
-    //     padding-left: 80px;
-    // }
+    background-image: url("../img/bg/about.jpg");
+    background-size: cover;
+    background-position: 100% 22%;
+    background-repeat: no-repeat;
+    position: relative;
 
     &__column {
         display: flex;
@@ -27,14 +23,14 @@
             font-family: SF Pro Display;
             font-style: normal;
             font-weight: 300;
-            font-size: 70px;
+            font-size: toVh(70);
             line-height: 110%;
             color: $white-main;
             margin-right: 50px;
 
 
             @include tablet {
-                font-size: 56px;
+                font-size: 48px;
             }
 
             @include tablet-1200 {
@@ -61,7 +57,7 @@
             line-height: 140%;
             color: $white-main;
 
-            @include tablet-1200 {
+            @include tablet {
                 font-size: 16px;
             }
 
@@ -79,9 +75,9 @@
 
     &__img-wrapper {
         position: relative;
-        margin-top: 70px;
+        margin-top: toVh(70);
 
-        @include mobile-620 {
+        @include tablet-1200 {
             margin-top: 30px;
         }
     }
@@ -99,5 +95,19 @@
 
     }
 
-    &__img {}
+    &__img {
+        height: toVh(516);
+
+        @include tablet-992 {
+            height: toVh(320);
+
+        }
+
+        @include mobile-620 {
+            height: toVh(200);
+
+        }
+
+        width: 100%;
+    }
 }

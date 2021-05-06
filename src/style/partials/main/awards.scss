@@ -1,4 +1,11 @@
 .awards {
+
+    background-image: url("../img/bg/awards.jpg");
+    background-size: cover;
+    background-position: 100% 22%;
+    background-repeat: no-repeat;
+    position: relative;
+
     @include tablet-1200 {
         padding-top: 120px;
     }
@@ -14,7 +21,11 @@
         line-height: 110%;
         color: #F3F3F3;
 
-        @include tablet-1200 {
+        @include tablet {
+            font-size: 56px;
+        }
+
+        @include tablet {
             text-align: center;
             font-size: 48px;
         }
@@ -31,36 +42,34 @@
     }
 
     &__awards {
-        margin-top: 100px;
+        margin-top: toVh(70);
 
         @include tablet {
-            margin-top: 50px;
-
+            margin-top: toVh(50);
         }
 
-        @include tablet-1200 {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 35px;
-        }
+        // @include tablet-1200 {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     margin-top: toVh(35);
+        // }
     }
 
     &__award {
         display: flex;
         align-items: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: toVh(20);
+        padding-bottom: toVh(20);
         font-family: SF Pro Display;
         line-height: 140%;
 
-        @include tablet-1200 {}
 
-        @include tablet-1200 {
-            padding-top: 0;
-            width: 50%;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+        // @include tablet-1200 {
+        //     padding-top: 0;
+        //     width: 50%;
+        //     flex-direction: column;
+        //     justify-content: flex-start;
+        // }
 
         @include mobile {
             padding-top: 20px;
@@ -70,9 +79,9 @@
         &:not(:last-child) {
             border-bottom: 1px solid #787A7C;
 
-            @include tablet-1200 {
-                border-bottom-width: 0;
-            }
+            // @include tablet-1200 {
+            //     border-bottom-width: 0;
+            // }
 
             @include mobile {
                 border-bottom-width: 1px;
@@ -81,14 +90,18 @@
     }
 
     &__award-img {
-        padding-right: 10%;
+        margin-right: 10%;
+        width: 100%;
+        max-width: 253px;
+        height: toVh(128);
 
         @include tablet {
-            padding-right: 5%;
+            max-width: 200px;
+
         }
 
         @include tablet-1200 {
-            padding-right: 0;
+            margin-right: 5%;
         }
     }
 
@@ -102,13 +115,13 @@
 
         @include tablet {
             font-size: 24px;
-            width: 45%;
+            width: 42%;
         }
 
-        @include tablet-1200 {
-            margin-top: 15px;
-            width: auto;
-        }
+        // @include tablet-1200 {
+        //     margin-top: 15px;
+        //     width: auto;
+        // }
     }
 
     &__award-name {
@@ -122,11 +135,11 @@
             width: 15%;
         }
 
-        @include tablet-1200 {
-            margin-top: 15px;
+        // @include tablet-1200 {
+        //     margin-top: 10px;
 
-            width: auto;
-        }
+        //     width: auto;
+        // }
     }
 
     &__award-date {
@@ -134,10 +147,10 @@
         color: #F3F3F3;
         margin-left: auto;
 
-        @include tablet-1200 {
-            margin-top: 15px;
+        // @include tablet-1200 {
+        //     margin-top: 10px;
 
-            margin-left: 0;
-        }
+        //     margin-left: 0;
+        // }
     }
 }

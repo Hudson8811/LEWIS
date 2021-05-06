@@ -1,38 +1,28 @@
-.section {
-    overflow-y: auto;
-}
-
 .home {
+    background-image: url("../img/bg/home.jpg");
+    background-size: cover;
+    background-position: 100% 22%;
+    background-repeat: no-repeat;
+    position: relative;
 
-    // @include tablet {
-    //     padding-top: 268px;
-    //     padding-left: 300px;
-    // }
-
-    // @include tablet-1200 {
-    //     padding-top: 13%;
-    //     padding-left: 150px;
-    // }
-
-    // @include mobile {
-    //     padding-left: 150px;
-    //     padding-top: 180px;
-    // }
-
-    // @include height-550 {
-    //     padding-left: 150px;
-    //     padding-top: 130px;
-    // }
-
-    // @include mobile-620 {
-    //     padding-left: 80px;
-    //     padding-top: 80px;
-    // }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1F1F1F;
+        opacity: 0.3;
+        z-index: 1;
+    }
 
     &__row {
         display: flex;
         flex-direction: column;
         width: 100%;
+        position: relative;
+        z-index: 2;
     }
 
     &__text {
@@ -49,8 +39,12 @@
         line-height: 110%;
         color: #F3F3F3;
 
-        @include mobile {
+        @include tablet-1200 {
             font-size: 78px;
+        }
+
+        @include mobile {
+            font-size: 64px;
         }
 
         @include mobile-350 {
@@ -72,8 +66,8 @@
     }
 
     &__link {
-        width: 195px;
-        height: 195px;
+        width: toVh(195);
+        height: toVh(195);
         background: #E9CF49;
         border-radius: 50%;
         align-self: flex-end;

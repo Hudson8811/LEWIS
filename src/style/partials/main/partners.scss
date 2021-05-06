@@ -1,4 +1,9 @@
 .partners {
+    background-image: url("../img/bg/partners.jpg");
+    background-size: cover;
+    background-position: 100% 22%;
+    background-repeat: no-repeat;
+    position: relative;
 
     &__container {}
 
@@ -11,9 +16,22 @@
         color: #F3F3F3;
         width: 840/1427 * 100%;
 
-        @include tablet-1200 {
-            font-size: 54px;
+        @media (max-height:900px) {
+            font-size: 64px;
+
+        }
+
+        @include tablet {
+            font-size: 56px;
             width: 80%;
+        }
+
+        @include tablet-1200 {
+            width: 100%;
+        }
+
+        @include mobile {
+            font-size: 32px;
         }
     }
 
@@ -21,14 +39,19 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin-top: 116px;
+        margin-top: toVh(116);
+
+        @media (max-height:900px) {
+            margin-top: 0;
+        }
 
         @include tablet {
-            margin-top: 70px;
+            margin-top: toVh(70);
         }
 
         @include tablet-1200 {
             margin-top: 25px;
+            flex-direction: column-reverse;
         }
     }
 
@@ -37,14 +60,33 @@
         align-items: flex-end;
         justify-content: flex-end;
         width: 200/1427 * 100%;
+        flex: 0 0 auto;
+
+        @include tablet-1200 {
+            margin-top: 15px;
+            width: 100%;
+        }
     }
 
-    &__img {}
+    &__img {
+        width: toVh(195);
+        height: toVh(195);
+
+        @include tablet-1200 {
+            width: 135px;
+            height: 135px;
+            margin-left: auto;
+        }
+    }
 
     &__partners {
         display: flex;
         flex-wrap: wrap;
         width: 1085/1427 * 100%;
+
+        @include tablet-1200 {
+            width: 100%;
+        }
     }
 
     &__partner {
@@ -52,7 +94,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 46px;
+        padding: toVh(46);
+
+        @include tablet-1200 {
+            padding: 20px;
+        }
+
+        @include mobile {
+            padding: 20px;
+            width: 50%;
+        }
     }
 
     &__partner-img {}

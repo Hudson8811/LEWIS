@@ -2,12 +2,8 @@
     position: fixed;
     z-index: 9;
     left: 70px;
-    top: 200px;
+    top: toVh(230);
     height: 70vh;
-
-    @include height-550 {
-        top: 150px;
-    }
 
     @include tablet-992 {
         left: 0px;
