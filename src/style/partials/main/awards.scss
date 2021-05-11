@@ -9,12 +9,14 @@
         padding-top: 120px;
     }
 
-    @include mobile-620 {
-        padding-top: 80px;
-    }
 
     @include mobile {
         padding-left: 50px;
+    }
+
+    @include mobile-620 {
+        padding-top: 80px;
+        padding-left: 20px;
     }
 
     &__container {}
