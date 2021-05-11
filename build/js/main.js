@@ -2181,8 +2181,8 @@ $(document).ready(function () {
         } else if (!isTablet && !isInited) {
             isInited = true
 
-            const anchors = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-            const labels = ['home', 'cases', 'about', 'services', 'partners', 'awards', 'testimonials', 'blog', 'contacts']
+            const anchors = ['home', 'cases', 'about', 'services', 'partners', 'awards', 'testimonials', 'blog', 'contacts']
+            const labels = ['home', 'Selected works', 'about me', 'services', 'My clients', 'awards', 'testimonials', 'My insights', 'get in touch']
 
             function setLabel(index) {
                 const label = labels[index];

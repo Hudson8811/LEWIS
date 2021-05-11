@@ -5,15 +5,19 @@
     top: toVh(230);
     height: 70vh;
 
+    @media (max-height: 850px) {
+        top: 200px;
+    }
+
     @include tablet-1000 {
         display: none;
+
     }
 
     &__wrapper {
         height: 90vh;
         display: flex;
         flex-direction: column;
-
     }
 
     &__line {
@@ -22,8 +26,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 70%;
-        padding: 20px 0;
+        height: 80%;
+        padding-top: 70px;
+        padding-bottom: 20px;
+
+        @media (max-height: 850px) {
+            height: 70%;
+        }
 
         &-gold {
             height: 20%;
@@ -43,8 +52,16 @@
     &__name-page {
         transform: rotate(-90deg) translateX(50%);
         position: absolute;
-        top: 0;
+        top: 40px;
         transform-origin: center;
+        text-transform: uppercase;
+        width: 160px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #F3F3F3;
     }
 
     &__name-number {
