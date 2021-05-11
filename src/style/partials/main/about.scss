@@ -93,6 +93,13 @@
         left: 30%;
         transform: translateY(-50%);
         z-index: 2;
+        cursor: pointer;
+
+        &:hover {
+            .about__img-wrapper {
+                opacity: 0.8;
+            }
+        }
 
         @include mobile {
             width: 75px;

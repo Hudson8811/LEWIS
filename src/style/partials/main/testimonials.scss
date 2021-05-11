@@ -181,7 +181,7 @@
         position: absolute;
         right: 30px;
         bottom: 0;
-        top: 92%;
+        top: auto;
         left: 85%;
 
 
@@ -198,6 +198,27 @@
             height: 32px;
         }
 
+        svg {
+            circle {
+                transition: .3s ease;
+            }
+
+            path {
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    stroke: #f3f3f3;
+                }
+
+                path {
+                    stroke: #f3f3f3;
+                }
+            }
+        }
 
     }
 
@@ -205,7 +226,7 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        top: 92%;
+        top: auto;
 
         @include tablet-1200 {
             right: 0;
@@ -218,7 +239,27 @@
             height: 32px;
         }
 
+        svg {
+            circle {
+                transition: .3s ease;
+            }
 
+            path {
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    stroke: #f3f3f3;
+                }
+
+                path {
+                    stroke: #f3f3f3;
+                }
+            }
+        }
     }
 
     &__swiper-scrollbar {}

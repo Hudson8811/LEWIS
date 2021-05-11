@@ -63,6 +63,11 @@ $(document).ready(function () {
             $('#pagepiling').pagepiling({
                 anchors: anchors,
                 verticalCentered: false,
+                menu: null,
+                normalScrollElements: null,
+                normalScrollElementTouchThreshold: 5,
+                touchSensitivity: 5,
+                keyboardScrolling: true,
 
                 onLeave: function (index, nextIndex, direction) {
                     setPageNumber(nextIndex - 1)

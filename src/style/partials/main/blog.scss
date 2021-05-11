@@ -98,7 +98,7 @@
 
     &__swiper-button-prev {
         position: absolute;
-        top: 20px;
+        top: 25px;
         right: 70px;
         left: inherit;
 
@@ -106,17 +106,61 @@
             top: auto;
             bottom: 0;
         }
+
+        svg {
+            circle {
+                transition: .3s ease;
+            }
+
+            path {
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    stroke: #f3f3f3;
+                }
+
+                path {
+                    stroke: #f3f3f3;
+                }
+            }
+        }
     }
 
     &__swiper-button-next {
         position: absolute;
-        top: 20px;
+        top: 25px;
         right: 0;
         left: inherit;
 
         @include mobile {
             top: auto;
             bottom: 0;
+        }
+
+        svg {
+            circle {
+                transition: .3s ease;
+            }
+
+            path {
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    stroke: #f3f3f3;
+                }
+
+                path {
+                    stroke: #f3f3f3;
+                }
+            }
         }
     }
 
