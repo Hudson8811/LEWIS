@@ -31,7 +31,7 @@
         }
 
         @include mobile {
-            font-size: 32px;
+            font-size: 42px;
         }
     }
 
@@ -59,8 +59,9 @@
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        width: 200/1427 * 100%;
         flex: 0 0 auto;
+        max-width: 195px;
+        width: 100%;
 
         @include tablet-1200 {
             margin-top: 15px;
@@ -69,12 +70,12 @@
     }
 
     &__img {
-        width: toVh(195);
-        height: toVh(195);
+        width: 195px;
+        height: 195px;
 
         @include tablet-1200 {
-            width: 135px;
-            height: 135px;
+            width: 120px;
+            height: 120px;
             margin-left: auto;
         }
     }
@@ -100,7 +101,7 @@
             padding: 20px;
         }
 
-        @include mobile {
+        @include mobile-520 {
             padding: 20px;
             width: 50%;
         }

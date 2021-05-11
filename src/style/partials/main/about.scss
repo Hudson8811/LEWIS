@@ -28,7 +28,6 @@
             color: $white-main;
             margin-right: 50px;
 
-
             @include tablet {
                 font-size: 48px;
             }
@@ -38,11 +37,10 @@
             }
 
             @include tablet-992 {
-                width: 80%;
+                width: 90%;
             }
 
             @include mobile-520 {
-                font-size: 24px;
                 width: 100%;
                 margin-right: 0;
             }
@@ -67,7 +65,6 @@
             }
 
             @include mobile-520 {
-                font-size: 14px;
                 margin-top: 15px;
             }
         }
@@ -76,6 +73,14 @@
     &__img-wrapper {
         position: relative;
         margin-top: toVh(70);
+        height: toVh(516);
+        overflow: hidden;
+
+        @media (max-height: 850px) {
+            margin-top: toVh(35);
+            height: toVh(480);
+
+        }
 
         @include tablet-1200 {
             margin-top: 30px;
@@ -87,27 +92,22 @@
         top: 50%;
         left: 30%;
         transform: translateY(-50%);
+        z-index: 2;
 
         @include mobile {
             width: 75px;
             height: 75px;
         }
-
     }
 
     &__img {
-        height: toVh(516);
-
-        @include tablet-992 {
-            height: toVh(320);
-
-        }
-
-        @include mobile-620 {
-            height: toVh(200);
-
-        }
-
-        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1515px;
+        height: 517px;
+        object-fit: cover;
+        object-position: center;
     }
 }

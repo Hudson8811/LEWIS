@@ -1,35 +1,29 @@
 .nav-widget {
     position: fixed;
-    z-index: 9;
+    z-index: 10;
     left: 70px;
     top: toVh(230);
     height: 70vh;
 
-    @include tablet-992 {
-        left: 0px;
-        top: 150px;
-    }
-
-    @include mobile-620 {
-        top: 120px;
+    @include tablet-1000 {
+        display: none;
     }
 
     &__wrapper {
-        height: 70vh;
+        height: 90vh;
         display: flex;
         flex-direction: column;
+
     }
 
     &__line {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 850/1080 * 100%;
+        justify-content: center;
+        height: 70%;
         padding: 20px 0;
-
-        @include height-420 {
-            height: 65%;
-        }
 
         &-gold {
             height: 20%;
@@ -38,7 +32,7 @@
         }
 
         &-white {
-            height: 80%;
+            height: 70%;
             background-color: $white-main;
             width: 2px;
             margin-bottom: 20px;
@@ -47,13 +41,17 @@
     }
 
     &__name-page {
-        transform: rotate(-90deg);
-        margin-bottom: 30px;
+        transform: rotate(-90deg) translateX(50%);
+        position: absolute;
+        top: 0;
+        transform-origin: center;
     }
 
     &__name-number {
         transform: rotate(-90deg);
         display: flex;
         justify-content: flex-end;
+        position: absolute;
+        bottom: 0;
     }
 }

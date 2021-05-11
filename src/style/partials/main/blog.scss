@@ -5,9 +5,14 @@
     background-repeat: no-repeat;
     position: relative;
 
+
+
     &__container {
         position: relative;
 
+        @include mobile {
+            padding-bottom: 70px;
+        }
     }
 
     &__title {
@@ -15,6 +20,10 @@
         font-size: 70px;
         line-height: 110%;
         color: #F3F3F3;
+
+        @include tablet-1000 {
+            font-size: 56px;
+        }
     }
 
     &__content {
@@ -51,11 +60,22 @@
         max-width: 400px;
     }
 
-    &__swiper-img-wrapper {}
+    &__swiper-img-wrapper {
+        position: relative;
+        overflow: hidden;
+        height: toVh(425);
+        width: 100%;
+    }
 
     &__swiper-img {
-        height: toVh(450);
-        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 450px;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        object-position: top;
     }
 
     &__swiper-card-date {
@@ -81,6 +101,11 @@
         top: 20px;
         right: 70px;
         left: inherit;
+
+        @include mobile {
+            top: auto;
+            bottom: 0;
+        }
     }
 
     &__swiper-button-next {
@@ -88,6 +113,11 @@
         top: 20px;
         right: 0;
         left: inherit;
+
+        @include mobile {
+            top: auto;
+            bottom: 0;
+        }
     }
 
     &__swiper-pagination {}
