@@ -24,7 +24,7 @@ let swiper2 = new Swiper('.swiper-container2', {
     },
     breakpoints: {
         // when window width is >= 320px
-        320: {
+        280: {
             slidesPerView: 1,
             slidesPerGroup: 1,
         },
@@ -37,8 +37,5 @@ let swiper2 = new Swiper('.swiper-container2', {
             slidesPerView: 3,
         },
         // when window width is >= 640px
-        1920: {
-            slidesPerView: 4,
-        }
     }
 });

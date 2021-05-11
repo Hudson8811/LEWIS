@@ -18,6 +18,10 @@
         justify-content: space-between;
         align-items: center;
 
+        @include tablet-1200 {
+            padding: 40px 60px;
+        }
+
         @include mobile-620 {
             padding: 20px;
         }

@@ -33,7 +33,6 @@
 
     &__title {
         font-family: SF Pro Display;
-        font-style: normal;
         font-weight: 300;
         font-size: 110px;
         line-height: 110%;
@@ -51,16 +50,10 @@
             font-size: 64px;
             width: 80%;
         }
-
-        // @include mobile-350 {
-        //     font-size: 54px;
-        // }
     }
 
     &__desc {
         font-family: SF Pro Display;
-        font-style: normal;
-        font-weight: normal;
         font-size: 18px;
         line-height: 130%;
         letter-spacing: 0.02em;
