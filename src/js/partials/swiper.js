@@ -19,8 +19,8 @@ let swiper2 = new Swiper('.swiper-container2', {
     slidesPerView: 3,
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
     },
     breakpoints: {
         // when window width is >= 320px

@@ -10,6 +10,7 @@
 /* Partials */
 
 //= partials/header.js
+//= partials/cases.js
 //= partials/pagepiling.js
 //= partials/swiper.js
 
