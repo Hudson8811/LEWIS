@@ -19,21 +19,17 @@
         }
 
         &-title {
-            width: 840/1427 * 100%;
+            width: 840/1426 * 100%;
             font-family: SF Pro Display;
             font-style: normal;
             font-weight: 300;
-            font-size: toVh(70);
+            font-size: 70px;
             line-height: 110%;
             color: $white-main;
-            margin-right: 50px;
+            margin-right: 40px;
 
             @include tablet {
                 font-size: 48px;
-            }
-
-            @include tablet-1200 {
-                font-size: 42px;
             }
 
             @include tablet-992 {

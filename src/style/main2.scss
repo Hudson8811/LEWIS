@@ -5,7 +5,7 @@
     @import 'helpers/layout.scss';
     @import 'helpers/fonts.scss';
 
-    @import 'partials/header.scss';
+    @import 'partials/header-not-main.scss';
     @import 'partials/case/case.scss';
     @import 'partials/case/info.scss';
     @import 'partials/case/img.scss';
@@ -13,4 +13,3 @@
     @import 'partials/case/hero.scss';
     @import 'partials/blog/blog.scss';
     @import 'partials/blog/checkbox.scss';
-
