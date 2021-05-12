@@ -24,19 +24,23 @@
     }
     &__link{
         position: relative;
-        background: url(../img/case/next-img.jpg);
+        // background: url(../img/case/next-img.jpg);
         margin-top: 70px;
         width: 100%;
         height: 300px;
         padding: 90px 275px 90px 150px;
         @include tablet-1200{
             padding: 37px 90px 37px 90px;
+            height: 200px;
         }
         @include tablet-992{
             padding: 57px 70px 52px 70px;
         }
         @include mobile-620{
             padding: 56px 20px 56px 20px;
+        }
+        @include mobile-520{
+            height: 225px;
         }
         &::after{
             content: '';
@@ -47,10 +51,12 @@
             left: 0;
             background: linear-gradient(0deg, rgba(31, 31, 31, 0.5), rgba(31, 31, 31, 0.5))
         }
-        @include tablet-1200{
-            height: 200px;
-        }
         &-img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
