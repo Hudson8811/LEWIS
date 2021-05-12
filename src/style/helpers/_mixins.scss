@@ -10,6 +10,12 @@
     }
 }
 
+@mixin tablet-1000 {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
 @mixin tablet-992 {
     @media (max-width: 992px) {
         @content;
@@ -97,24 +103,8 @@ $resolutiond: 1920;
 }
 
 
+$baseHeight: 1080;
 
-$resolution: 375;
-
-
-@function vw($px) {
-    @return (($px/$resolution) * 100)+vw;
-}
-
-
-$resolutiond2: 1200;
-
-@function qw($px) {
-    @return (($px/$resolutiond2) * 80)+vw;
-}
-
-
-$resolutiond3: 1110;
-
-@function qw2($px) {
-    @return (($px/$resolutiond3) * 100)+vw;
+@function toVh($px) {
+    @return (($px/$baseHeight) * 100)+vh;
 }

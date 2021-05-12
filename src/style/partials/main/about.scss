@@ -1,13 +1,9 @@
 .about {
-    // @include tablet-1200 {
-    //     padding-top: 150px;
-    //     padding-left: 150px;
-    // }
-
-    // @include mobile-620 {
-    //     padding-top: 80px;
-    //     padding-left: 80px;
-    // }
+    background-image: url("../img/bg/about.jpg");
+    background-size: cover;
+    background-position: 100% 22%;
+    background-repeat: no-repeat;
+    position: relative;
 
     &__column {
         display: flex;
@@ -27,14 +23,13 @@
             font-family: SF Pro Display;
             font-style: normal;
             font-weight: 300;
-            font-size: 70px;
+            font-size: toVh(70);
             line-height: 110%;
             color: $white-main;
             margin-right: 50px;
 
-
             @include tablet {
-                font-size: 56px;
+                font-size: 48px;
             }
 
             @include tablet-1200 {
@@ -42,11 +37,10 @@
             }
 
             @include tablet-992 {
-                width: 80%;
+                width: 90%;
             }
 
             @include mobile-520 {
-                font-size: 24px;
                 width: 100%;
                 margin-right: 0;
             }
@@ -61,7 +55,7 @@
             line-height: 140%;
             color: $white-main;
 
-            @include tablet-1200 {
+            @include tablet {
                 font-size: 16px;
             }
 
@@ -71,7 +65,6 @@
             }
 
             @include mobile-520 {
-                font-size: 14px;
                 margin-top: 15px;
             }
         }
@@ -79,9 +72,17 @@
 
     &__img-wrapper {
         position: relative;
-        margin-top: 70px;
+        margin-top: toVh(70);
+        height: toVh(516);
+        overflow: hidden;
 
-        @include mobile-620 {
+        @media (max-height: 850px) {
+            margin-top: toVh(35);
+            height: toVh(480);
+
+        }
+
+        @include tablet-1200 {
             margin-top: 30px;
         }
     }
@@ -91,13 +92,29 @@
         top: 50%;
         left: 30%;
         transform: translateY(-50%);
+        z-index: 2;
+        cursor: pointer;
+
+        &:hover {
+            .about__img-wrapper {
+                opacity: 0.8;
+            }
+        }
 
         @include mobile {
             width: 75px;
             height: 75px;
         }
-
     }
 
-    &__img {}
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1515px;
+        height: 517px;
+        object-fit: cover;
+        object-position: center;
+    }
 }

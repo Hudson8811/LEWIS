@@ -1,0 +1,87 @@
+.cases {
+    background-image: url("../img/bg/partners.jpg");
+    background-size: cover;
+    background-position: 100% 22%;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__container {
+        overflow: hidden;
+        display: flex;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 0 0 auto;
+        animation: runningLine 10s linear infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    @keyframes runningLine {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    &__card {
+        width: 427px;
+        flex: 0 0 auto;
+        position: relative;
+        height: toVh(805);
+        border-left: 1px solid #787A7C;
+        transition: .3s ease;
+
+        &:hover {
+            cursor: url('../img/cases/cursor.jpg') 62 62, pointer;
+
+            img {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 40px;
+        left: 70px;
+        transform: rotate(-90deg);
+        transform-origin: left;
+        width: toVh(805);
+    }
+
+    &__card-number {
+        font-size: 22px;
+        line-height: 140%;
+        color: #F3F3F3;
+    }
+
+    &__card-name {
+        font-size: 70px;
+        line-height: 110%;
+        color: #F3F3F3;
+
+        @media (max-height: 850px) {
+            font-size: 56px;
+        }
+    }
+
+    &__card-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0;
+        transition: .3s;
+    }
+}

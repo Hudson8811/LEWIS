@@ -6,8 +6,10 @@
     width: 100%;
     font-size: 18px;
     line-height: 140%;
-    background-color: #000;
+    background-color: transparent;
     z-index: 10;
+
+    &::after {}
 
     &__wrapper {
         width: 100%;
@@ -15,6 +17,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include tablet-1200 {
+            padding: 40px 60px;
+        }
 
         @include mobile-620 {
             padding: 20px;
@@ -24,7 +30,8 @@
     &__left-inner {
         display: flex;
         justify-content: space-between;
-        width: 50%;
+        max-width: 485px;
+        width: 100%;
 
         @include tablet-992 {
             width: 100%;
@@ -54,7 +61,11 @@
         transition: .3s ease;
         display: flex;
         align-items: center;
-        margin: 0 auto;
+        margin-left: auto;
+
+        @include tablet-1200 {
+            margin: 0 auto;
+        }
 
         @include mobile-450 {
             display: none;
@@ -81,7 +92,7 @@
     &__right-inner {
         justify-content: space-between;
         display: flex;
-        width: 50%;
+        width: 40%;
 
         @include tablet-992 {
             width: 40px;
@@ -310,7 +321,7 @@
             align-items: flex-end;
 
             @include tablet-992 {
-                bottom: 30px;
+                bottom: 70px;
                 right: 45px;
             }
         }

@@ -1,38 +1,37 @@
 .nav-widget {
     position: fixed;
-    z-index: 9;
+    z-index: 10;
     left: 70px;
-    top: 200px;
+    top: toVh(230);
     height: 70vh;
 
-    @include height-550 {
-        top: 150px;
+    @media (max-height: 850px) {
+        top: 200px;
     }
 
-    @include tablet-992 {
-        left: 0px;
-        top: 150px;
-    }
+    @include tablet-1000 {
+        display: none;
 
-    @include mobile-620 {
-        top: 120px;
     }
 
     &__wrapper {
-        height: 70vh;
+        height: 90vh;
         display: flex;
         flex-direction: column;
     }
 
     &__line {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 850/1080 * 100%;
-        padding: 20px 0;
+        justify-content: center;
+        height: 80%;
+        padding-top: 70px;
+        padding-bottom: 20px;
 
-        @include height-420 {
-            height: 65%;
+        @media (max-height: 850px) {
+            height: 70%;
         }
 
         &-gold {
@@ -42,7 +41,7 @@
         }
 
         &-white {
-            height: 80%;
+            height: 70%;
             background-color: $white-main;
             width: 2px;
             margin-bottom: 20px;
@@ -51,13 +50,25 @@
     }
 
     &__name-page {
-        transform: rotate(-90deg);
-        margin-bottom: 30px;
+        transform: rotate(-90deg) translateX(50%);
+        position: absolute;
+        top: 40px;
+        transform-origin: center;
+        text-transform: uppercase;
+        width: 160px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #F3F3F3;
     }
 
     &__name-number {
         transform: rotate(-90deg);
         display: flex;
         justify-content: flex-end;
+        position: absolute;
+        bottom: 0;
     }
 }
