@@ -1,12 +1,16 @@
 .nav-widget {
     position: fixed;
     z-index: 10;
-    left: 70px;
+    left: 105px;
     top: toVh(230);
     height: 70vh;
 
     @media (max-height: 850px) {
         top: 200px;
+    }
+
+    @include tablet-1200 {
+        left: 65px;
     }
 
     @include tablet-1000 {
