@@ -126,11 +126,28 @@ body {
         border-left: 1px solid #787A7C;
         transition: .3s ease;
 
+        @include tablet-1000 {
+            margin: 0 10px;
+            width: 350px;
+            height: 620px;
+        }
+
+        @include mobile-450 {
+            width: 300px;
+            height: 580px;
+        }
+
         &:hover {
             cursor: url('../img/cases/cursor.jpg') 62 62, pointer;
 
             img {
                 opacity: 1;
+            }
+
+            @include tablet-1000 {
+                img {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -142,6 +159,7 @@ body {
         transform: rotate(-90deg);
         transform-origin: left;
         width: toVh(805);
+        z-index: 5;
     }
 
     &__card-number {
@@ -158,6 +176,10 @@ body {
         @media (max-height: 850px) {
             font-size: 56px;
         }
+
+        @include tablet-1000 {
+            font-size: 48px;
+        }
     }
 
     &__card-img {
@@ -170,5 +192,9 @@ body {
         object-position: center;
         opacity: 0;
         transition: .3s;
+
+        @include tablet-1000 {
+            opacity: 1;
+        }
     }
 }

@@ -58,5 +58,10 @@ $(document).ready(function () {
     initPaging()
 
     window.addEventListener('resize', initPaging)
+
+    $("a.fancybox").fancybox({
+        type: 'iframe',
+        allowfullscreen: 'true'
+    });
 });
 

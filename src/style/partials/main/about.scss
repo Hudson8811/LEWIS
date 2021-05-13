@@ -83,6 +83,15 @@
         }
     }
 
+    &__video {
+        &:hover {
+
+            +.about__img {
+                opacity: 0.8;
+            }
+        }
+    }
+
     &__img-play {
         position: absolute;
         top: 50%;
@@ -90,12 +99,7 @@
         transform: translateY(-50%);
         z-index: 2;
         cursor: pointer;
-
-        &:hover {
-            .about__img-wrapper {
-                opacity: 0.8;
-            }
-        }
+        transition: .3s ease;
 
         @include mobile {
             width: 75px;
@@ -112,5 +116,7 @@
         height: 517px;
         object-fit: cover;
         object-position: center;
+        transition: .3s ease;
+
     }
 }

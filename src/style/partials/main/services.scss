@@ -16,18 +16,14 @@
         color: $white-main;
         width: 850/1427 * 100%;
 
-        @media (max-height: 950px) {
-            font-size: 56px;
-            width: 50%;
-        }
+
 
         @include tablet {
-            font-size: 56px;
             width: 80%;
         }
 
         @include tablet-1200 {
-            font-size: 48px;
+            font-size: 56px;
         }
 
         @include tablet-1000 {
@@ -43,6 +39,10 @@
         margin-top: toVh(50);
         display: flex;
         justify-content: space-between;
+
+        @media (max-height: 950px) {
+            margin-top: toVh(30);
+        }
 
         @include tablet-1000 {
             flex-direction: column;
