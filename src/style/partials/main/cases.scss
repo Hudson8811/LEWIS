@@ -1,20 +1,20 @@
-body {
-    &:hover {
-        .cases__row {
-            animation-play-state: paused;
-        }
+// body {
+//     &:hover {
+//         .cases__row {
+//             animation-play-state: paused;
+//         }
 
-        .cases__row-wrapper {
-            animation-play-state: paused;
-        }
+//         // .cases__row-wrapper {
+//         //     animation-play-state: paused;
+//         // }
 
-        @include tablet-1000 {
-            .cases__row {
-                animation-play-state: initial;
-            }
-        }
-    }
-}
+//         // @include tablet-1000 {
+//         //     .cases__row {
+//         //         animation-play-state: initial;
+//         //     }
+//         // }
+//     }
+// }
 
 .cases {
     background-image: url("../img/bg/partners.jpg");
@@ -30,62 +30,56 @@ body {
         overflow: hidden;
     }
 
-    &__play-animation-right {
-        width: 400px;
-        height: 100vh;
-        position: absolute;
-        right: 0px;
-        transform: translateX(75%);
-        z-index: 100;
-        background-color: transparent;
+    // &__play-animation-right {
+    //     width: 400px;
+    //     height: 100vh;
+    //     position: absolute;
+    //     right: 0px;
+    //     transform: translateX(75%);
+    //     z-index: 100;
+    //     background-color: transparent;
 
-        &:hover {
-            &~.cases__container .cases__row {
-                animation-play-state: running;
-            }
+    //     &:hover {
+    //         &~.cases__container .cases__row {
+    //             animation-play-state: running;
+    //         }
 
-            &~.cases__container .cases__row-wrapper {
-                // animation-direction: reverse, alternate;
-                animation-play-state: paused;
-            }
-        }
-    }
+    //         &~.cases__container .cases__row-wrapper {
+    //             // animation-direction: reverse, alternate;
+    //             animation-play-state: paused;
+    //         }
+    //     }
+    // }
 
-    &__play-animation-left {
-        width: 400px;
-        height: 100vh;
-        // background-color: red;
-        position: absolute;
-        left: 0px;
-        transform: translateX(-75%);
-        z-index: 100;
-        background-color: transparent;
+    // &__play-animation-left {
+    //     width: 400px;
+    //     height: 100vh;
+    //     // background-color: red;
+    //     position: absolute;
+    //     left: 0px;
+    //     transform: translateX(-75%);
+    //     z-index: 100;
+    //     background-color: transparent;
 
-        &:hover {
-            &~.cases__container .cases__row-wrapper {
-                // animation-direction: reverse, alternate;
-                animation-play-state: running;
-            }
+    //     &:hover {
+    //         &~.cases__container .cases__row-wrapper {
+    //             // animation-direction: reverse, alternate;
+    //             animation-play-state: running;
+    //         }
 
-            &~.cases__container .cases__row {
-                // animation-direction: reverse, alternate;
-                animation-play-state: paused;
-            }
-        }
-    }
+    //         &~.cases__container .cases__row {
+    //             // animation-direction: reverse, alternate;
+    //             animation-play-state: paused;
+    //         }
+    //     }
+    // }
 
     &__row {
         display: flex;
         flex-wrap: nowrap;
         flex: 0 0 auto;
         animation: runningLine 10s linear infinite;
-
-        &-wrapper {
-            display: flex;
-            flex-wrap: nowrap;
-            flex: 0 0 auto;
-            animation: runningLineWrap 10s linear infinite;
-        }
+        animation-play-state: running;
 
         @include tablet-1000 {
             animation-play-state: running;
@@ -93,6 +87,13 @@ body {
 
         &:hover {
             animation-play-state: paused;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            flex: 0 0 auto;
+            // animation: runningLineWrap 10s linear infinite;
         }
     }
 

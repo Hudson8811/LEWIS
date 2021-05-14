@@ -31,7 +31,8 @@ var path = {
 		style: ['src/style/main.scss', 'src/style/main2.scss'],
 		images: 'src/images/**/*.*',
 		img: 'src/img/**/*.*',
-		fonts: 'src/fonts/**/*.*'
+		fonts: 'src/fonts/**/*.*',
+		static: 'src/static/**/*.*',
 	},
 	watch: {
 		html: 'src/**/*.pug',
@@ -126,9 +127,13 @@ gulp.task('fonts:build', function () {
 		.pipe(gulp.dest(path.build.fonts))
 });
 
+gulp.task('static:build', function () {
+	return gulp.src(path.src.static)
+		.pipe(gulp.dest(path.build.html))
+});
 
 
-gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts:build', 'images:build', 'img:build'));
+gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts:build', 'static:build', 'images:build', 'img:build'));
 
 gulp.task('watch', function () {
 	gulp.watch([path.watch.html], gulp.series("html:build"));
