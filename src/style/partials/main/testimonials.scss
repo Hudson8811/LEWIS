@@ -44,8 +44,12 @@
     &__swiper-container {
         width: 900px;
         height: fit-content;
-        margin-top: toVh(50);
+        margin-top: toVh(120);
         position: relative;
+
+        @media (max-height: 800px) {
+            margin-top: toVh(70);
+        }
 
         @include tablet-1200 {
             width: 100%;
@@ -69,7 +73,7 @@
         }
 
         @include mobile-620 {
-            padding: 0 10px 0 20px;
+            padding: 20px 0 0 40px;
         }
     }
 
@@ -107,7 +111,10 @@
             }
 
             @include mobile-620 {
-                display: none;
+                width: 32px;
+                height: 22px;
+                top: -17px;
+                left: -38px;
             }
         }
     }
