@@ -75,6 +75,10 @@
         @include mobile-620 {
             padding: 20px 0 0 40px;
         }
+
+        @include mobile-450 {
+            padding: 0;
+        }
     }
 
     &__swiper-text {
@@ -115,6 +119,10 @@
                 height: 22px;
                 top: -17px;
                 left: -38px;
+            }
+
+            @include mobile-450 {
+                display: none;
             }
         }
     }

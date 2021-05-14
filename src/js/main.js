@@ -5,7 +5,7 @@
 //= libs/jquery.fancybox.min.js
 //= libs/swiper.min.js
 //= libs/gsap.min.js
-
+//= libs/just-validate.min.js
 
 /* Partials */
 
@@ -13,6 +13,8 @@
 //= partials/cases.js
 //= partials/pagepiling.js
 //= partials/swiper.js
+//= partials/validate.js
+
 
 
 

@@ -32,6 +32,7 @@ $(document).ready(function () {
 
             function setActiveMenu(index) {
                 const anchor = anchors[index];
+
                 console.log(document.querySelector(`[data-menuanchor="${anchor}"]`))
                 document.querySelector(`[data-menuanchor="${anchor}"]`).classList.add('active')
             }

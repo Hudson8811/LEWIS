@@ -74,7 +74,7 @@
             width: 100%;
         }
 
-        @include mobile-520 {
+        @include mobile-620 {
             max-width: 100%;
         }
     }
@@ -113,7 +113,14 @@
             padding: 20px;
         }
 
-        @include mobile-520 {
+        @include tablet-1000 {
+            justify-content: left;
+            padding: 15px 5px;
+        }
+
+        @include mobile-620 {
+            justify-content: center;
+
             padding: 20px;
             width: 50%;
         }
