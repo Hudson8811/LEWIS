@@ -1197,12 +1197,17 @@ $(document).ready(function () {
                 });
             }
 
+            function setActiveMenu(index) {
+                const anchor = anchors[index];
+                console.log(document.querySelector(`[data-menuanchor="${anchor}"]`))
+                document.querySelector(`[data-menuanchor="${anchor}"]`).classList.add('active')
+            }
+
             $('#pagepiling').pagepiling({
                 anchors: anchors,
                 verticalCentered: false,
-                menu: null,
-                normalScrollElements: '.section',
-                normalScrollElementTouchThreshold: 1,
+                // normalScrollElements: '.section',
+                normalScrollElementTouchThreshold: 3,
                 touchSensitivity: 5,
                 keyboardScrolling: true,
                 easing: 'swing',
@@ -1215,9 +1220,11 @@ $(document).ready(function () {
                 afterRender: function () {
                     setPageNumber(0)
                     setLabel(0)
+                    setActiveMenu(0)
+
                     setTimeout(() => {
                         $('#preloader').css('display', 'none');
-                    }, 500);
+                    }, 800);
                 }
             });
         }

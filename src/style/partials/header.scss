@@ -114,11 +114,23 @@
         }
 
         &-item {
-            position: relative;
 
             &:first-child {
                 margin-right: 50px;
             }
+
+
+
+            &:hover {
+                &::after {
+                    right: 0;
+                    background-color: $white-main;
+                }
+            }
+        }
+
+        &-link {
+            position: relative;
 
             &::after {
                 content: '';
@@ -137,8 +149,6 @@
                 }
             }
         }
-
-        &-link {}
     }
 
     &__burger {
