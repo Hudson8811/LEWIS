@@ -432,12 +432,31 @@ body {
         display: flex;
         flex-direction: column;
         max-width: 840px;
-
+        &__label{
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            @include tablet-1200 {
+                &:first-child {
+                    margin-right: 30px;
+                }
+            }
+            @include mobile-450{
+                &:first-child {
+                    margin-right: 0px;
+                }
+                &:last-child {
+                    margin-top: 70px;
+                }
+            }
+        }
         &__wrap {
             display: flex;
             align-items: center;
             justify-content: space-between;
-
+            @include mobile-450{
+                flex-direction: column;
+            }
         }
 
         &__input {
@@ -448,19 +467,19 @@ body {
             line-height: 140%;
             color: $white-main;
             border-bottom: 1px solid $gray;
-            max-width: 400px;
             padding-bottom: 20px;
             width: 100%;
+            color: #787a7c !important;
+            border-bottom-color: #787a7c !important;
+            border-left-color: transparent !important;
+            border-right-color: transparent !important;
+            border-top-color: transparent !important;
 
             @include mobile-450 {
                 min-width: auto;
             }
 
-            @include tablet-1200 {
-                &:first-child {
-                    margin-right: 30px;
-                }
-            }
+            
         }
 
         &__textarea {
@@ -476,7 +495,7 @@ body {
             margin-top: 170px;
 
             @include tablet-1200 {
-                margin-top: 30px;
+                margin-top: 70px;
             }
         }
 
@@ -504,7 +523,22 @@ body {
         &__checkbox {
             &-wrap {
                 margin-top: 70px;
+                position: relative;
             }
         }
     }
+}
+
+.js-validate-error-label {
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    z-index: 10;
+    border-radius: 4px;
+    color: #B81111 !important;
+    padding: 4px 8px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all .4s linear;
+
 }

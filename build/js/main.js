@@ -1293,12 +1293,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 required: true,
                 email: true
             },
-
+            checkbox:{
+                required: true
+            },
+            text:{
+                required: true,
+                minLength: 2
+            },
             messages: {
                 name: {
                     minLength: 'My custom message about only minLength rule'
                 },
-                email: 'My custom message about error (one error message for all rules)'
+                email: 'My custom message about error (one error message for all rules)',
+                checkbox: 'My custom message for checkbox',
+                text: 'My custom message for textarea'
             },
 
             tooltip: {

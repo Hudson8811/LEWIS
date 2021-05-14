@@ -98,14 +98,18 @@
                   </div>
                 </div>
                 <h3 class="blog-comments__subtitle">Leave your comment</h3>
-                <form class="comment-form blog-comments__form" action="#"> 
+                <form class="comment-form blog-comments__form js-form" action="#"> 
                   <div class="comment-form__wrap"> 
-                    <input class="comment-form__input" type="text" placeholder="Name">
-                    <input class="comment-form__input" type="text" placeholder="E-mail">
+                    <div class="comment-form__label">
+                      <input class="comment-form__input" type="text" placeholder="Name" data-validate-field="name">
+                    </div>
+                    <div class="comment-form__label">
+                      <input class="comment-form__input" type="text" placeholder="E-mail" data-validate-field="email">
+                    </div>
                   </div>
                   <textarea class="comment-form__textarea" placeholder="Your comment"></textarea>
                   <div class="comment-form__checkbox-wrap">
-                    <input class="comment-form__checkbox" id="cb2" type="checkbox" name="" required>
+                    <input class="comment-form__checkbox" id="cb2" type="checkbox" name="" data-validate-field="checkbox">
                     <label class="comment-form__label" for="cb2">Save my name, email, and website in this browser for the next time I comment.</label>
                   </div>
                   <button class="comment-form__button" type="submit"> <img src="img/blog/form-button.svg" alt=""></button>

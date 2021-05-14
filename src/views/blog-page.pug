@@ -56,13 +56,15 @@ block main
                                         a.comment__reply(href="#") Reply 
                                     p.comment__text Virality bootstrapping angel investor entrepreneur direct mailing termsheet analytics android. Supply chain iteration social proof.
                         h3.blog-comments__subtitle Leave your comment
-                        form.comment-form.blog-comments__form(action="#") 
+                        form.comment-form.blog-comments__form.js-form(action="#") 
                             .comment-form__wrap 
-                                input.comment-form__input(type="text", placeholder="Name")
-                                input.comment-form__input(type="text", placeholder="E-mail") 
+                                .comment-form__label
+                                    input.comment-form__input(type="text", placeholder="Name", data-validate-field="name")
+                                .comment-form__label
+                                    input.comment-form__input(type="text", placeholder="E-mail", data-validate-field="email") 
                             textarea.comment-form__textarea(placeholder="Your comment")
                             .comment-form__checkbox-wrap
-                                input#cb2.comment-form__checkbox(type="checkbox", name="", required)
+                                input#cb2.comment-form__checkbox(type="checkbox", name="", data-validate-field="checkbox")
                                 label.comment-form__label(for="cb2") Save my name, email, and website in this browser for the next time I comment.
                             button.comment-form__button(type="submit") 
                                 img(src="img/blog/form-button.svg", alt="")
