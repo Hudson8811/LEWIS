@@ -1,16 +1,14 @@
 .nav-widget {
     position: fixed;
     z-index: 10;
-    left: 105px;
-    top: toVh(230);
-    height: 70vh;
+    padding-left: 105px;
+    padding-top: toVh(205);
+    height: 100vh;
+    padding-bottom: 20px;
 
-    @media (max-height: 850px) {
-        top: 200px;
-    }
-
-    @include tablet-1200 {
-        left: 65px;
+    @include tablet {
+        padding-top: toVh(170);
+        padding-left: 65px;
     }
 
     @include tablet-1000 {
@@ -35,7 +33,13 @@
         padding-bottom: 20px;
 
         @media (max-height: 850px) {
-            height: 70%;
+            height: 80%;
+        }
+
+        &-transparent {
+            height: 30%;
+            background-color: transparent;
+            width: 2px;
         }
 
         &-gold {
@@ -56,16 +60,20 @@
     &__name-page {
         transform: rotate(-90deg) translateX(50%);
         position: absolute;
-        top: 40px;
+        top: 160px;
         transform-origin: center;
         text-transform: uppercase;
         width: 160px;
-        text-align: center;
+        text-align: right;
         font-size: 18px;
         line-height: 130%;
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #F3F3F3;
+
+        @media (max-height: 850px) {
+            font-size: 16px;
+        }
     }
 
     &__name-number {

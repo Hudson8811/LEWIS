@@ -280,6 +280,13 @@
         }
 
         &-item {
+            &.active {
+                & a::after {
+                    right: 0;
+                    background-color: $white-main;
+                }
+            }
+
             &:not(:first-child) {
                 margin-top: toVh(30);
 
@@ -303,13 +310,10 @@
                 background-color: transparent;
             }
 
+
+
             &:hover {
                 color: $white-main;
-
-                &::after {
-                    right: 0;
-                    background-color: $white-main;
-                }
             }
         }
 

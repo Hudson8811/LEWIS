@@ -34,11 +34,12 @@ $(document).ready(function () {
                 anchors: anchors,
                 verticalCentered: false,
                 menu: null,
-                normalScrollElements: null,
-                normalScrollElementTouchThreshold: 5,
+                normalScrollElements: '.section',
+                normalScrollElementTouchThreshold: 1,
                 touchSensitivity: 5,
                 keyboardScrolling: true,
                 easing: 'swing',
+                menu: '#myMenu',
                 onLeave: function (index, nextIndex, direction) {
                     setPageNumber(nextIndex - 1)
                     setLabel(nextIndex - 1)
