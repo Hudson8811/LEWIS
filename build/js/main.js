@@ -1314,73 +1314,27 @@ let swiper2 = new Swiper('.swiper-container2', {
     }
 });
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< HEAD
-    console.log('w')
-    new JustValidate('.js-form', {
-        rules: {
-            name: {
-                required: true,
-                minLength: 2,
-                maxLength: 20,
-            },
-            email: {
+    if (document.querySelector('.js-form')) {
+        new JustValidate('.js-form', {
+            rules: {
+              checkbox: {
+                required: true
+              },
+              email: {
                 required: true,
                 email: true
-            },
-            checkbox:{
-                required: true
-            },
-            text:{
+              },
+              name: {
                 required: true,
                 minLength: 2
             },
             messages: {
-=======
-    if (document.querySelector('.js-form')) {
-        new JustValidate('.js-form', {
-            rules: {
->>>>>>> a3334765194495c2ce2168ba2201a4d372228952
-                name: {
-                    required: true,
-                    minLength: 2,
-                    maxLength: 20,
-                },
-                email: {
-                    required: true,
-                    email: true
-                },
-<<<<<<< HEAD
-                email: 'My custom message about error (one error message for all rules)',
-                checkbox: 'My custom message for checkbox',
-                text: 'My custom message for textarea'
+              name: {
+                minLength: 'My custom message about only minLength rule'
+              },
+              email: 'My custom message about error (one error message for all rules)'
+            },  
             },
-=======
->>>>>>> a3334765194495c2ce2168ba2201a4d372228952
-
-                messages: {
-                    name: {
-                        minLength: 'My custom message about only minLength rule'
-                    },
-                    email: 'My custom message about error (one error message for all rules)'
-                },
-
-                tooltip: {
-                    fadeOutClass: '.error'
-                }
-
-                // submitHandler: function (form, values, ajax) {
-
-                //     ajax({
-                //         url: 'https://just-validate-api.herokuapp.com/submit',
-                //         method: 'POST',
-                //         data: values,
-                //         async: true,
-                //         callback: function (response) {
-                //             console.log(response)
-                //         }
-                //     });
-                // },
-            }
-        });
+        })
     }
 })
