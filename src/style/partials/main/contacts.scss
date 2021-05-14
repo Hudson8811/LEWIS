@@ -123,6 +123,7 @@
         &__label {
             position: relative;
             width: 100%;
+            max-width: 400px;
 
             &:first-child {
                 margin-right: 30px;
@@ -140,6 +141,9 @@
                 @include mobile-620 {
                     margin-top: 40px;
                 }
+            }
+            @include tablet-1200 {
+                max-width: 100%;
             }
         }
 
