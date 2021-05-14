@@ -120,26 +120,9 @@
             }
         }
 
-        &__input {
-            background: transparent;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 140%;
-            color: $white-main;
-            border-bottom: 1px solid $gray;
-            max-width: 400px;
-            padding-bottom: 20px;
+        &__label {
+            position: relative;
             width: 100%;
-
-            @include tablet-1200 {
-                max-width: 100%;
-            }
-
-            @include mobile-620 {
-                padding-bottom: 12px;
-                font-size: 16px;
-            }
 
             &:first-child {
                 margin-right: 30px;
@@ -155,8 +138,39 @@
                 }
 
                 @include mobile-620 {
-                    margin-top: 20px;
+                    margin-top: 40px;
                 }
+            }
+        }
+
+        &__input {
+            background: transparent;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 140%;
+            color: $white-main;
+            border-bottom: 1px solid $gray;
+            max-width: 400px;
+            padding-bottom: 20px;
+            width: 100%;
+
+            &.js-validate-error-field {
+                color: $gray !important;
+                border-bottom-color: $gray !important;
+                border-left-color: transparent !important;
+                border-right-color: transparent !important;
+                border-top-color: transparent !important;
+
+            }
+
+            @include tablet-1200 {
+                max-width: 100%;
+            }
+
+            @include mobile-620 {
+                padding-bottom: 12px;
+                font-size: 16px;
             }
         }
 
@@ -178,7 +192,7 @@
 
             @include mobile-620 {
                 padding-bottom: 12px;
-                margin-top: 20px;
+                margin-top: 40px;
                 font-size: 16px;
                 height: 35px;
             }
@@ -203,5 +217,23 @@
                 transform: rotate(-90deg);
             }
         }
+    }
+}
+
+
+.js-validate-error-label {
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    z-index: 10;
+    border-radius: 4px;
+    color: #B81111 !important;
+    padding: 4px 8px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all .4s linear;
+
+    @include mobile-620 {
+        top: 45px;
     }
 }

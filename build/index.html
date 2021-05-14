@@ -182,8 +182,7 @@
           <div class="section-main partners">
             <div class="container-main partners__container">
               <div class="partners__title">I had the chance to work for top brands and small beautiful ones</div>
-              <div class="partners__row">
-                <div class="partners__img-wrapper"><img class="partners__img" src="img/partners/btn.png"></div>
+              <div class="partners__row"><a class="partners__img-wrapper" href="#contacts"><img class="partners__img" src="img/partners/btn.png"></a>
                 <div class="partners__partners">
                   <div class="partners__partner"> <img class="partners__partner-img" src="img/partners/partner-1.png"></div>
                   <div class="partners__partner"> <img class="partners__partner-img" src="img/partners/partner-2.png"></div>
@@ -286,18 +285,27 @@
               <div class="blog__content">
                 <div class="swiper-container2 blog__swiper-container">
                   <div class="swiper-wrapper blog__swiper-wrapper">
-                    <div class="swiper-slide blog__swiper-slide"> <a class="blog__swiper-card" href="blog-page.html">
-                        <div class="blog__swiper-img-wrapper"><img class="blog__swiper-img" src="img/blog-main/img1.jpg"></div>
-                        <div class="blog__swiper-card-date">30 March 2021</div>
-                        <div class="blog__swiper-card-desc">Sales market growth hacking direct mailing stock lean startup analytics termsheet return </div></a></div>
-                    <div class="swiper-slide blog__swiper-slide"> <a class="blog__swiper-card" href="case-page.html">
-                        <div class="blog__swiper-img-wrapper"><img class="blog__swiper-img" src="img/blog-main/img2.jpg"></div>
-                        <div class="blog__swiper-card-date">13 April 2021</div>
-                        <div class="blog__swiper-card-desc">Creative stealth pitch. Client entrepreneur gamification first mover advantage social proof </div></a></div>
-                    <div class="swiper-slide blog__swiper-slide"> <a class="blog__swiper-card" href="#">
-                        <div class="blog__swiper-img-wrapper"><img class="blog__swiper-img" src="img/blog-main/img3.jpg"></div>
-                        <div class="blog__swiper-card-date">03 April 2021</div>
-                        <div class="blog__swiper-card-desc">Business plan assets angel investor mass market</div></a></div>
+                    <div class="swiper-slide blog__swiper-slide"> 
+                      <div class="blog__swiper-card"><a class="blog__swiper-link" href="case-page.html">
+                          <div class="blog__swiper-img-wrapper"><img class="blog__swiper-img" src="img/blog-main/img1.jpg"></div>
+                          <div class="blog__swiper-card-date">30 March 2021</div></a>
+                        <div class="blog__swiper-card-desc">Sales market growth hacking direct mailing stock lean startup analytics termsheet return </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide blog__swiper-slide"> 
+                      <div class="blog__swiper-card"><a class="blog__swiper-link" href="blog-page.html">
+                          <div class="blog__swiper-img-wrapper"><img class="blog__swiper-img" src="img/blog-main/img2.jpg"></div>
+                          <div class="blog__swiper-card-date">13 April 2021</div></a>
+                        <div class="blog__swiper-card-desc">Creative stealth pitch. Client entrepreneur gamification first mover advantage social proof </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide blog__swiper-slide"> 
+                      <div class="blog__swiper-card"><a class="blog__swiper-link" href="#">
+                          <div class="blog__swiper-img-wrapper"><img class="blog__swiper-img" src="img/blog-main/img3.jpg"></div>
+                          <div class="blog__swiper-card-date">03 April 2021</div></a>
+                        <div class="blog__swiper-card-desc">Business plan assets angel investor mass market</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-button-prev2 blog__swiper-button-prev"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -327,13 +335,17 @@
                     <li class="contacts-list__item">hello@georgelewis.com</li>
                   </ul>
                 </div>
-                <form class="contacts-form" action="#"> 
+                <form class="contacts-form js-form" action="#"> 
                   <div class="contacts-form__wrap"> 
-                    <input class="contacts-form__input" type="text" placeholder="Name">
-                    <input class="contacts-form__input" type="text" placeholder="E-mail">
+                    <div class="contacts-form__label">
+                      <input class="contacts-form__input" type="text" placeholder="Name" data-validate-field="name">
+                    </div>
+                    <div class="contacts-form__label">
+                      <input class="contacts-form__input" type="text" placeholder="E-mail" data-validate-field="email">
+                    </div>
                   </div>
                   <textarea class="contacts-form__textarea" placeholder="Your comment"></textarea>
-                  <button class="contacts-form__button" type="submit"> <img src="img/blog/form-button.svg" alt=""></button>
+                  <button class="contacts-form__button"> <img src="img/blog/form-button.svg" alt=""></button>
                 </form>
               </div>
             </div>

@@ -11,7 +11,6 @@ window.onload = function () {
     const header = document.querySelector('.header')
     if (header.classList.contains("header-js")) {
         window.addEventListener('scroll', () => {
-
             let y = window.scrollY;
             let headerHeight = header.offsetHeight;
 
