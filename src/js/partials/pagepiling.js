@@ -1,15 +1,49 @@
 $(document).ready(function () {
 
-    let isInited = false
+    let isInited = window.matchMedia('(max-width: 1000px)').matches
+    const sections = [...document.querySelectorAll('.js-section')]
+
+    function onScroll() {
+        const isPageEnd = window.scrollY + window.innerHeight >= document.scrollingElement.scrollHeight;
+
+        sections.forEach((section) => {
+            const { top, bottom } = section.getBoundingClientRect()
+            const inViewport = top <= 0 && bottom > 0
+            const id = section.getAttribute('id')
+
+            if (inViewport && !isPageEnd) {
+                document.querySelector(`[data-menuanchor="${id}"]`).classList.add('active')
+            } else {
+                document.querySelector(`[data-menuanchor="${id}"]`).classList.remove('active')
+            }
+        })
+        if (isPageEnd) {
+            const id = sections[sections.length - 1].getAttribute('id')
+            document.querySelector(`[data-menuanchor="${id}"]`).classList.add('active')
+        }
+    }
 
     function initPaging() {
         const isTablet = window.matchMedia('(max-width: 1000px)').matches
 
         if (isTablet && isInited) {
             isInited = false
-            $.fn.pagepiling.destroy('all');
+
+            if ($.fn.pagepiling.destroy) {
+                $.fn.pagepiling.destroy('all');
+            }
+
             $('body').css('overflow', 'auto');
             $('html').css('overflow', 'auto');
+
+            [...document.querySelectorAll('.header__menu-item')].forEach(element => {
+                if (element.classList.contains('active')) {
+                    element.classList.remove('active')
+                }
+            });
+            if (document.getElementById('pagepiling')) {
+                window.addEventListener('scroll', onScroll)
+            }
         } else if (!isTablet && !isInited) {
             isInited = true
 
@@ -33,7 +67,6 @@ $(document).ready(function () {
             function setActiveMenu(index) {
                 const anchor = anchors[index];
 
-                console.log(document.querySelector(`[data-menuanchor="${anchor}"]`))
                 document.querySelector(`[data-menuanchor="${anchor}"]`).classList.add('active')
             }
 
