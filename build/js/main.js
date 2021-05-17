@@ -1174,7 +1174,7 @@ $(document).ready(function () {
 
         sections.forEach((section) => {
             const { top, bottom } = section.getBoundingClientRect()
-            const inViewport = top <= 0 && bottom > 0
+            const inViewport = top <= 0 && bottom >= 0
             const id = section.getAttribute('id')
 
             if (inViewport && !isPageEnd) {
@@ -1183,10 +1183,35 @@ $(document).ready(function () {
                 document.querySelector(`[data-menuanchor="${id}"]`).classList.remove('active')
             }
         })
+
         if (isPageEnd) {
             const id = sections[sections.length - 1].getAttribute('id')
             document.querySelector(`[data-menuanchor="${id}"]`).classList.add('active')
         }
+    }
+
+    function scrollToSection() {
+        const items = document.querySelectorAll('.header__menu-item');
+
+        [...items].forEach(item => {
+            item.addEventListener('click', function (el) {
+                el.preventDefault();
+
+                [...sections].forEach(section => {
+
+                    if (section.getAttribute('id') === item.dataset.menuanchor) {
+                        console.log(window.scrollY)
+                        let { top, bottom } = section.getBoundingClientRect()
+                        console.log(top, window.scrollY)
+                        window.scrollTo({
+                            top: window.scrollY + top,
+                            behavior: "smooth"
+                        });
+                        return
+                    }
+                });
+            })
+        })
     }
 
     function initPaging() {
@@ -1206,11 +1231,15 @@ $(document).ready(function () {
                 if (element.classList.contains('active')) {
                     element.classList.remove('active')
                 }
+                if (document.getElementById('pagepiling')) {
+                    scrollToSection();
+                }
             });
             if (document.getElementById('pagepiling')) {
                 window.addEventListener('scroll', onScroll)
+
             }
-        } else if (!isTablet && !isInited) {
+        } else if (!isTablet && !isInited && document.getElementById('pagepiling')) {
             isInited = true
 
             if (document.getElementById('pagepiling')) {
@@ -1236,14 +1265,16 @@ $(document).ready(function () {
 
             function setActiveMenu(index) {
                 const anchor = anchors[index];
-
+                const header = document.querySelector('.header__menu')
+                // console.log(header)
+                header.classList.remove('active')
                 document.querySelector(`[data-menuanchor="${anchor}"]`).classList.add('active')
             }
 
             $('#pagepiling').pagepiling({
                 anchors: anchors,
                 verticalCentered: false,
-                // normalScrollElements: '.section',
+                // normalScrollElements: '.container-main',
                 normalScrollElementTouchThreshold: 3,
                 touchSensitivity: 5,
                 keyboardScrolling: true,
