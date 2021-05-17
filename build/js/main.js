@@ -1213,6 +1213,10 @@ $(document).ready(function () {
         } else if (!isTablet && !isInited) {
             isInited = true
 
+            if (document.getElementById('pagepiling')) {
+                window.removeEventListener('scroll', onScroll)
+            }
+
             const anchors = ['home', 'cases', 'about', 'services', 'partners', 'awards', 'testimonials', 'blog', 'contacts']
             const labels = ['home', 'Selected works', 'about me', 'services', 'My clients', 'awards', 'testimonials', 'My insights', 'get in touch']
 

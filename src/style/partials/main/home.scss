@@ -38,13 +38,13 @@
         line-height: 110%;
         color: #F3F3F3;
 
-        @media (max-height: 800px) {
-            font-size: 90px;
-        }
+        // @media (max-height: 800px) {
+        //     font-size: 90px;
+        // }
 
-        @include tablet-1200 {
-            font-size: 78px;
-        }
+        // @include tablet-1200 {
+        //     font-size: 78px;
+        // }
 
         @include mobile-520 {
             font-size: 64px;
@@ -59,7 +59,7 @@
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #F3F3F3;
-        margin-top: 40px;
+        margin-top: toVh(40);
         max-width: 278px;
     }
 
