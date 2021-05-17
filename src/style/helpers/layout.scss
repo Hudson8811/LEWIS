@@ -17,8 +17,7 @@ html {
     padding-top: toVh(205);
     padding-right: vwd(100);
     padding-bottom: toVh(50);
-    height: 100vh;
-    overflow: auto;
+    height: 100%;
 
     @include tablet {
         padding-top: toVh(170);

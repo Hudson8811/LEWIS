@@ -1,8 +1,5 @@
 .awards {
-    background-image: url("../img/bg/awards.jpg");
-    background-size: cover;
-    background-position: 100% 22%;
-    background-repeat: no-repeat;
+
     position: relative;
 
     @include tablet-1200 {

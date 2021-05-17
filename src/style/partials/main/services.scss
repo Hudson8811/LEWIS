@@ -1,8 +1,5 @@
 .services {
-    background-image: url("../img/bg/services.jpg");
-    background-size: cover;
-    background-position: 100% 22%;
-    background-repeat: no-repeat;
+
     position: relative;
 
     &__container {}
@@ -15,8 +12,6 @@
         line-height: 110%;
         color: $white-main;
         width: 850/1427 * 100%;
-
-
 
         @include tablet {
             width: 80%;

@@ -1,8 +1,5 @@
 .contacts {
-    background-image: url("../img/bg/contacts.jpg");
-    background-size: cover;
-    background-position: 100% 22%;
-    background-repeat: no-repeat;
+
     position: relative;
 
     &__title {
@@ -142,6 +139,7 @@
                     margin-top: 40px;
                 }
             }
+
             @include tablet-1200 {
                 max-width: 100%;
             }
