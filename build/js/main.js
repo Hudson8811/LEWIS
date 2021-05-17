@@ -1297,7 +1297,7 @@ $(document).ready(function () {
                     setPageNumber(0)
                     setLabel(0)
                     setActiveMenu(0)
-                    progressBar(0)
+                    progressBar(1)
 
                     setTimeout(() => {
                         $('#preloader').css('display', 'none');
