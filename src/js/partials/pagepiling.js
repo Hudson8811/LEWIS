@@ -153,9 +153,7 @@ $(document).ready(function () {
                     setActiveMenu(0)
                     progressBar(1)
 
-                    setTimeout(() => {
-                        $('#preloader').css('display', 'none');
-                    }, 800);
+
                 }
             });
         }
@@ -164,6 +162,10 @@ $(document).ready(function () {
     initPaging()
 
     window.addEventListener('resize', initPaging)
+
+    setTimeout(() => {
+        $('#preloader').css('display', 'none');
+    }, 800);
 
     $("a.fancybox").fancybox({
         type: 'iframe',
