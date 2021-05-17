@@ -51,9 +51,8 @@ $(document).ready(function () {
                 [...sections].forEach(section => {
 
                     if (section.getAttribute('id') === item.dataset.menuanchor) {
-                        console.log(window.scrollY)
                         let { top, bottom } = section.getBoundingClientRect()
-                        console.log(top, window.scrollY)
+
                         window.scrollTo({
                             top: window.scrollY + top,
                             behavior: "smooth"
@@ -61,6 +60,9 @@ $(document).ready(function () {
                         return
                     }
                 });
+                if (window.matchMedia('(max-width: 1000px)').matches) {
+                    $('.header__menu').removeClass('active')
+                }
             })
         })
     }
