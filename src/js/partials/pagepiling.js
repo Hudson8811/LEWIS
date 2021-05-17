@@ -104,6 +104,11 @@ $(document).ready(function () {
                 header.classList.remove('active')
                 document.querySelector(`[data-menuanchor="${anchor}"]`).classList.add('active')
             }
+            function progressBar(index) {
+                const progressBar = document.querySelector('.gold-line-js');
+
+                progressBar.style.height = 100 / 9 * index + '%';
+            }
 
             $('#pagepiling').pagepiling({
                 anchors: anchors,
@@ -119,12 +124,14 @@ $(document).ready(function () {
                 onLeave: function (index, nextIndex, direction) {
                     setPageNumber(nextIndex - 1)
                     setLabel(nextIndex - 1)
+                    progressBar(nextIndex)
                 },
 
                 afterRender: function () {
                     setPageNumber(0)
                     setLabel(0)
                     setActiveMenu(0)
+                    progressBar(0)
 
                     setTimeout(() => {
                         $('#preloader').css('display', 'none');

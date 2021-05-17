@@ -43,9 +43,12 @@
         }
 
         &-gold {
+            position: absolute;
             height: 20%;
             background-color: #E9CF49;
             width: 2px;
+            transition: height .3s ease;
+            top: 0;
         }
 
         &-white {
