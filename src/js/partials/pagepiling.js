@@ -24,6 +24,23 @@ $(document).ready(function () {
         }
     }
 
+    function moveToContacts() {
+        const linkToContacts = document.getElementById('linkToContacts')
+
+        linkToContacts.addEventListener('click', (el) => {
+            const searchSection = document.getElementById('contacts')
+
+            el.preventDefault()
+            const { top, bottom } = searchSection.getBoundingClientRect()
+
+
+            window.scrollTo({
+                top: window.scrollY + top,
+                behavior: "smooth"
+            });
+        })
+    }
+
     function scrollToSection() {
         const items = document.querySelectorAll('.header__menu-item');
 
@@ -67,6 +84,7 @@ $(document).ready(function () {
                 }
                 if (document.getElementById('pagepiling')) {
                     scrollToSection();
+                    moveToContacts()
                 }
             });
             if (document.getElementById('pagepiling')) {

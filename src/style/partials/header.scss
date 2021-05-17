@@ -210,6 +210,10 @@
             font-size: 24px;
         }
 
+        @include mobile-350 {
+            font-size: 20px;
+        }
+
         &-list {
             overflow-y: auto;
 
@@ -246,6 +250,11 @@
             @include mobile-620 {
                 padding-left: 20%;
                 padding-top: 30%;
+            }
+
+            @include mobile-350 {
+                padding-left: 40px;
+                padding-top: 100px;
             }
         }
 
@@ -302,6 +311,10 @@
 
                 @include mobile-620 {
                     margin-top: 20px;
+                }
+
+                @include mobile-350 {
+                    margin-top: 10px;
                 }
             }
         }
