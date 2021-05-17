@@ -19,6 +19,7 @@
         width: 100%;
         position: relative;
         z-index: 2;
+        height: 100%;
     }
 
     &__text {
@@ -64,7 +65,7 @@
         height: 195px;
         border-radius: 50%;
         align-self: flex-end;
-        margin-top: -40px;
+        margin-top: auto;
         transition: .3s ease;
         transform: rotate(-13deg);
         z-index: 5;
