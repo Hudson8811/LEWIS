@@ -1167,7 +1167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // casesCard.forEach(function (card) {
 
 // })
-$(document).ready(function () {
+document.addEventListener('click', function () {
     function isTablet() {
         return window.matchMedia('(max-width: 1000px)').matches
     }
