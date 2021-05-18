@@ -1093,17 +1093,21 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 
 /* Partials */
 
-window.onload = function () {
-    $('.header__burger').on('click', function () {
-        $('.header__menu').addClass('active')
+document.addEventListener('click', function () {
+    const burger = document.querySelector('.header__burger');
+    const menu = document.querySelector('.header__menu');
+    const menuExit = document.querySelector('.header__menu-exit');
+    const main = document.querySelector('.main');
+    const header = document.querySelector('.header');
+
+    burger.addEventListener('click', function () {
+        menu.classList.add('active');
     })
 
-    $('.header__menu-exit').on('click', function () {
-        $('.header__menu').removeClass('active')
+    menuExit.addEventListener('click', function () {
+        menu.classList.remove('active');
     })
 
-    const main = document.querySelector('.main')
-    const header = document.querySelector('.header')
     if (header.classList.contains("header-js")) {
         window.addEventListener('scroll', () => {
             let y = window.scrollY;
@@ -1123,19 +1127,18 @@ window.onload = function () {
         })
     }
 
+    // function initLoader() {
+    //     const isTablet = window.matchMedia('(max-width: 1000px)').matches
 
-    function initLoader() {
-        const isTablet = window.matchMedia('(max-width: 1000px)').matches
+    //     // if (isTablet) {
+    //     //     setTimeout(() => {
+    //     //         document.getElementById('preloader').style.display = 'none';
+    //     //     }, 500);
+    //     // }
+    // }
 
-        if (isTablet) {
-            setTimeout(() => {
-                $('#preloader').css('display', 'none');
-            }, 500);
-        }
-    }
-    initLoader()
-
-}
+    // initLoader()
+})
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.js-cases-row')) {
         const row = document.querySelector('.js-cases-row');
@@ -1165,6 +1168,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // })
 $(document).ready(function () {
+    function isTablet() {
+        return window.matchMedia('(max-width: 1000px)').matches
+    }
 
     let isInited = window.matchMedia('(max-width: 1000px)').matches
     const sections = [...document.querySelectorAll('.js-section')]
@@ -1211,40 +1217,36 @@ $(document).ready(function () {
         const items = document.querySelectorAll('.header__menu-item');
 
         [...items].forEach(item => {
-            item.addEventListener('click', function (el) {
-                el.preventDefault();
+            const section = document.getElementById(item.dataset.menuanchor);
 
-                [...sections].forEach(section => {
+            item.addEventListener('click', function (event) {
+                event.preventDefault();
 
-                    if (section.getAttribute('id') === item.dataset.menuanchor) {
-                        let { top, bottom } = section.getBoundingClientRect()
+                const { top } = section.getBoundingClientRect()
 
-                        window.scrollTo({
-                            top: window.scrollY + top,
-                            behavior: "smooth"
-                        });
-                        return
-                    }
+                window.scrollTo({
+                    top: window.scrollY + top,
+                    behavior: "smooth"
                 });
-                if (window.matchMedia('(max-width: 1000px)').matches) {
-                    $('.header__menu').removeClass('active')
+
+                if (isTablet()) {
+                    document.querySelector('.header__menu').classList.remove('active');
                 }
             })
         })
     }
 
     function initPaging() {
-        const isTablet = window.matchMedia('(max-width: 1000px)').matches
 
-        if (isTablet && isInited) {
+        if (isTablet() && isInited) {
             isInited = false
 
             if ($.fn.pagepiling.destroy) {
                 $.fn.pagepiling.destroy('all');
             }
 
-            $('body').css('overflow', 'auto');
-            $('html').css('overflow', 'auto');
+            document.querySelector('body').style.overflow = 'auto';
+            document.querySelector('html').style.overflow = 'auto';
 
             [...document.querySelectorAll('.header__menu-item')].forEach(element => {
                 if (element.classList.contains('active')) {
@@ -1259,7 +1261,7 @@ $(document).ready(function () {
                 window.addEventListener('scroll', onScroll)
 
             }
-        } else if (!isTablet && !isInited && document.getElementById('pagepiling')) {
+        } else if (!isTablet() && !isInited && document.getElementById('pagepiling')) {
             isInited = true
 
             if (document.getElementById('pagepiling')) {
@@ -1286,10 +1288,11 @@ $(document).ready(function () {
             function setActiveMenu(index) {
                 const anchor = anchors[index];
                 const header = document.querySelector('.header__menu')
-                // console.log(header)
+
                 header.classList.remove('active')
                 document.querySelector(`[data-menuanchor="${anchor}"]`).classList.add('active')
             }
+
             function progressBar(index) {
                 const progressBar = document.querySelector('.gold-line-js');
 
@@ -1299,12 +1302,7 @@ $(document).ready(function () {
             $('#pagepiling').pagepiling({
                 anchors: anchors,
                 verticalCentered: false,
-                // normalScrollElements: '.container-main',
-                // normalScrollElementTouchThreshold: 1,
-                // touchSensitivity: 5,
-                // keyboardScrolling: true,
                 scrollingSpeed: 150,
-                // loopBottom: true,
                 easing: 'swing',
                 menu: '#myMenu',
                 onLeave: function (index, nextIndex, direction) {
@@ -1318,8 +1316,6 @@ $(document).ready(function () {
                     setLabel(0)
                     setActiveMenu(0)
                     progressBar(1)
-
-
                 }
             });
         }
@@ -1330,8 +1326,8 @@ $(document).ready(function () {
     window.addEventListener('resize', initPaging)
 
     setTimeout(() => {
-        $('#preloader').css('display', 'none');
-    }, 1100);
+        document.getElementById('preloader').style.display = 'none';
+    }, 800);
 
     $("a.fancybox").fancybox({
         type: 'iframe',

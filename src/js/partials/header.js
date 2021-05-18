@@ -1,14 +1,18 @@
-window.onload = function () {
-    $('.header__burger').on('click', function () {
-        $('.header__menu').addClass('active')
+document.addEventListener('click', function () {
+    const burger = document.querySelector('.header__burger');
+    const menu = document.querySelector('.header__menu');
+    const menuExit = document.querySelector('.header__menu-exit');
+    const main = document.querySelector('.main');
+    const header = document.querySelector('.header');
+
+    burger.addEventListener('click', function () {
+        menu.classList.add('active');
     })
 
-    $('.header__menu-exit').on('click', function () {
-        $('.header__menu').removeClass('active')
+    menuExit.addEventListener('click', function () {
+        menu.classList.remove('active');
     })
 
-    const main = document.querySelector('.main')
-    const header = document.querySelector('.header')
     if (header.classList.contains("header-js")) {
         window.addEventListener('scroll', () => {
             let y = window.scrollY;
@@ -28,18 +32,17 @@ window.onload = function () {
         })
     }
 
+    // function initLoader() {
+    //     const isTablet = window.matchMedia('(max-width: 1000px)').matches
 
-    function initLoader() {
-        const isTablet = window.matchMedia('(max-width: 1000px)').matches
+    //     // if (isTablet) {
+    //     //     setTimeout(() => {
+    //     //         document.getElementById('preloader').style.display = 'none';
+    //     //     }, 500);
+    //     // }
+    // }
 
-        if (isTablet) {
-            setTimeout(() => {
-                $('#preloader').css('display', 'none');
-            }, 500);
-        }
-    }
-    initLoader()
-
-}
+    // initLoader()
+})
 
 
