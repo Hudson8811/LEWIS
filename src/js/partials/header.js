@@ -1,4 +1,4 @@
-document.addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const burger = document.querySelector('.header__burger');
     const menu = document.querySelector('.header__menu');
     const menuExit = document.querySelector('.header__menu-exit');
@@ -31,6 +31,11 @@ document.addEventListener('click', function () {
             }
         })
     }
+    function disabledPreloader() {
+        console.log('work')
+        document.getElementById('preloader').style.display = 'none';
+    }
+
 })
 
 

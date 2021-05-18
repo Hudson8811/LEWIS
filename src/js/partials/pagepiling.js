@@ -1,4 +1,4 @@
-document.addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function () {
     function isTablet() {
         return window.matchMedia('(max-width: 1000px)').matches
     }
@@ -156,9 +156,11 @@ document.addEventListener('click', function () {
 
     window.addEventListener('resize', initPaging)
 
-    setTimeout(() => {
+    function disabledPreloader() {
         document.getElementById('preloader').style.display = 'none';
-    }, 800);
+    }
+
+    setTimeout(disabledPreloader, 1000);
 
     $("a.fancybox").fancybox({
         type: 'iframe',

@@ -1093,7 +1093,7 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 
 /* Partials */
 
-document.addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const burger = document.querySelector('.header__burger');
     const menu = document.querySelector('.header__menu');
     const menuExit = document.querySelector('.header__menu-exit');
@@ -1126,6 +1126,11 @@ document.addEventListener('click', function () {
             }
         })
     }
+    function disabledPreloader() {
+        console.log('work')
+        document.getElementById('preloader').style.display = 'none';
+    }
+
 })
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.js-cases-row')) {
@@ -1155,7 +1160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // casesCard.forEach(function (card) {
 
 // })
-document.addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function () {
     function isTablet() {
         return window.matchMedia('(max-width: 1000px)').matches
     }
@@ -1313,9 +1318,11 @@ document.addEventListener('click', function () {
 
     window.addEventListener('resize', initPaging)
 
-    setTimeout(() => {
+    function disabledPreloader() {
         document.getElementById('preloader').style.display = 'none';
-    }, 800);
+    }
+
+    setTimeout(disabledPreloader, 1000);
 
     $("a.fancybox").fancybox({
         type: 'iframe',
