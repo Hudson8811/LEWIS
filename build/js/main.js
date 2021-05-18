@@ -1126,18 +1126,6 @@ document.addEventListener('click', function () {
             }
         })
     }
-
-    // function initLoader() {
-    //     const isTablet = window.matchMedia('(max-width: 1000px)').matches
-
-    //     // if (isTablet) {
-    //     //     setTimeout(() => {
-    //     //         document.getElementById('preloader').style.display = 'none';
-    //     //     }, 500);
-    //     // }
-    // }
-
-    // initLoader()
 })
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.js-cases-row')) {
