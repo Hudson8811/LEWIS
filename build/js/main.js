@@ -1331,7 +1331,7 @@ $(document).ready(function () {
 
     setTimeout(() => {
         $('#preloader').css('display', 'none');
-    }, 800);
+    }, 1100);
 
     $("a.fancybox").fancybox({
         type: 'iframe',

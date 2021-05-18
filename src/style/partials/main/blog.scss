@@ -45,6 +45,15 @@
         }
     }
 
+    &__swiper-link {
+        &:hover {
+            .blog__swiper-img-wrapper {
+                transform: scale(1.05);
+            }
+        }
+
+    }
+
     &__swiper-container {
         width: 100%;
         margin: -20px;
@@ -67,6 +76,7 @@
         overflow: hidden;
         height: toVh(425);
         width: 100%;
+        transition: transform .3s ease;
     }
 
     &__swiper-img {
