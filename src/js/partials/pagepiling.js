@@ -30,10 +30,10 @@ $(document).ready(function () {
     function moveToContacts() {
         const linkToContacts = document.getElementById('linkToContacts')
 
-        linkToContacts.addEventListener('click', (el) => {
+        linkToContacts.addEventListener('click', (event) => {
             const searchSection = document.getElementById('contacts')
 
-            el.preventDefault()
+            event.preventDefault()
             const { top, bottom } = searchSection.getBoundingClientRect()
 
 
