@@ -1316,7 +1316,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     setActiveMenu(0)
                     progressBar(1)
                     clearTimeout(timeout);
-                    timeout = setTimeout(animationActiveSection, 700, 0, 0)
+                    timeout = setTimeout(animationActiveSection, 700, 1, 0)
                 }
             });
         }

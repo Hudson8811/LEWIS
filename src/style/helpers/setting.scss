@@ -29,11 +29,5 @@ body {
 
     &.active {
         opacity: 1;
-
-        .section-main {
-            @include tablet-1000 {
-                opacity: 1;
-            }
-        }
     }
 }
