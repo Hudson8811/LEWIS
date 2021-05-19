@@ -216,7 +216,8 @@
 
         &-list {
             overflow-y: auto;
-
+            opacity: 0;
+            transition: opacity .3s ease;
         }
 
         &.active {
@@ -235,6 +236,8 @@
             color: #F3F3F3;
             display: flex;
             z-index: 101;
+            opacity: 0;
+            transition: opacity .3s ease;
 
             @include mobile-620 {
                 left: 40px;
@@ -350,6 +353,8 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            opacity: 0;
+            transition: opacity .3s ease;
 
             @include tablet-992 {
                 bottom: 70px;
