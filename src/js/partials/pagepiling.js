@@ -78,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             document.querySelector('body').style.overflow = 'auto';
             document.querySelector('html').style.overflow = 'auto';
-
             [...document.querySelectorAll('.header__menu-item')].forEach(element => {
                 if (element.classList.contains('active')) {
                     element.classList.remove('active')
@@ -90,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             if (document.getElementById('pagepiling')) {
                 window.addEventListener('scroll', onScroll)
-
             }
         } else if (!isTablet() && !isInited && document.getElementById('pagepiling')) {
             isInited = true

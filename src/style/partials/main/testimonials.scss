@@ -170,6 +170,8 @@
 
     &__swiper-social-item {
         svg {
+            transition: .3s;
+
             @include mobile-450 {
                 width: 32px;
                 height: 32px;
@@ -178,6 +180,12 @@
 
         &:first-child {
             margin-right: 20px;
+        }
+
+        &:hover {
+            svg {
+                opacity: .8;
+            }
         }
     }
 

@@ -22,7 +22,7 @@ html {
     opacity: 0;
 
     @include tablet-1000 {
-        opacity: 1;
+        opacity: 1 !important;
     }
 
     @include tablet {
