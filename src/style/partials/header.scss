@@ -218,7 +218,7 @@
         &-list {
             overflow-y: auto;
             opacity: 0;
-            transition: opacity .3s ease;
+            transition: opacity .6s ease;
             transition-delay: .45s;
 
         }
@@ -252,7 +252,7 @@
             display: flex;
             z-index: 101;
             opacity: 0;
-            transition: opacity .3s ease;
+            transition: opacity .6s ease;
             transition-delay: .3s;
 
             @include mobile-620 {
@@ -370,7 +370,7 @@
             flex-direction: column;
             align-items: flex-end;
             opacity: 0;
-            transition: opacity .3s ease;
+            transition: opacity .6s ease;
             transition-delay: .55s;
 
             @include tablet-992 {
