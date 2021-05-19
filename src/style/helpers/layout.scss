@@ -21,6 +21,10 @@ html {
     transition: .4s ease;
     opacity: 0;
 
+    @include tablet-1000 {
+        opacity: 1;
+    }
+
     @include tablet {
         padding-top: toVh(170);
         padding-left: 160px;

@@ -31,7 +31,9 @@ body {
         opacity: 1;
 
         .section-main {
-            // opacity: 1;
+            @include tablet-1000 {
+                opacity: 1;
+            }
         }
     }
 }
