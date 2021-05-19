@@ -21,9 +21,17 @@ body {
 .section {
     background-color: #000;
     opacity: 0;
+
     // transition: opacity .3s ease;
+    @include tablet-1000 {
+        opacity: 1;
+    }
 
     &.active {
         opacity: 1;
+
+        .section-main {
+            // opacity: 1;
+        }
     }
 }

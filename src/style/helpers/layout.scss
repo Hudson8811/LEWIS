@@ -18,6 +18,8 @@ html {
     padding-right: vwd(100);
     padding-bottom: toVh(50);
     height: 100%;
+    transition: .4s ease;
+    opacity: 0;
 
     @include tablet {
         padding-top: toVh(170);

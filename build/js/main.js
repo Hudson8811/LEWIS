@@ -1281,6 +1281,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 progressBar.style.height = 100 / 9 * index + '%';
             }
+            function animationActiveSection(index, nextIndex) {
+                const anchor = anchors[index];
+                const nextAnchor = anchors[nextIndex];
+                const nextActiveSection = document.querySelector(`.section__${nextAnchor}`);
+                const activeSection = document.querySelector(`.section__${anchor}`);
+
+                if (nextActiveSection.classList.contains('active')) {
+                    nextActiveSection.querySelector('.section-main').style.opacity = "1";
+                    activeSection.querySelector('.section-main').style.opacity = "0";
+                }
+            }
+
+            let timeout = null;
 
             $('#pagepiling').pagepiling({
                 anchors: anchors,
@@ -1288,10 +1301,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 scrollingSpeed: 150,
                 easing: 'swing',
                 menu: '#myMenu',
+
                 onLeave: function (index, nextIndex, direction) {
                     setPageNumber(nextIndex - 1)
                     setLabel(nextIndex - 1)
                     progressBar(nextIndex)
+                    clearTimeout(timeout);
+                    timeout = setTimeout(animationActiveSection, 700, index - 1, nextIndex - 1)
                 },
 
                 afterRender: function () {
@@ -1299,6 +1315,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     setLabel(0)
                     setActiveMenu(0)
                     progressBar(1)
+                    clearTimeout(timeout);
+                    timeout = setTimeout(animationActiveSection, 700, 0, 0)
                 }
             });
         }
