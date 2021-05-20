@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 progressBar.style.height = 100 / 9 * index + '%';
             }
+
             function animationActiveSection(index, nextIndex) {
                 const anchor = anchors[index];
                 const nextAnchor = anchors[nextIndex];
@@ -168,9 +169,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    initPaging()
+    initPaging();
 
-    window.addEventListener('resize', initPaging)
+    window.addEventListener('resize', initPaging);
 
     function disabledPreloader() {
         document.getElementById('preloader').style.display = 'none';

@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     burger.addEventListener('click', function () {
         menu.classList.add('active');
-    })
+    });
 
     menuExit.addEventListener('click', function () {
         menu.classList.remove('active');
-    })
+    });
 
     if (header.classList.contains("header-js")) {
         window.addEventListener('scroll', () => {
@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 header.style.top = 0;
                 header.style.transform = "translateY(0%)";
             }
-        })
+        });
     }
     function disabledPreloader() {
         console.log('work')
         document.getElementById('preloader').style.display = 'none';
     }
 
-})
+});
 
 

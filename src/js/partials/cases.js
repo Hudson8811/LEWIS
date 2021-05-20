@@ -20,9 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         cloneNodes()
     }
-})
-
-
-// casesCard.forEach(function (card) {
-
-// })
+});
