@@ -30,11 +30,7 @@
 
     &__content {
         margin-top: toVh(100);
-        margin-right: 0px;
-
-        @media (max-width:1920px) {
-            margin-right: 180px;
-        }
+        margin-right: 180px;
 
         @media (max-height: 900px) {
             margin-top: toVh(50);

@@ -36,9 +36,6 @@ let swiper2 = new Swiper('.swiper-container2', {
         1200: {
             slidesPerView: 3,
         },
-        1920: {
-            slidesPerView: 4,
-        },
         // when window width is >= 640px
     }
 });

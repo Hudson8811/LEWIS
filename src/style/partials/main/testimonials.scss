@@ -166,7 +166,6 @@
     &__swiper-social {
         display: flex;
         margin-top: 20px;
-        margin-bottom: 30px;
     }
 
     &__swiper-social-item {
@@ -199,24 +198,22 @@
     &__swiper-pagination {}
 
     &__swiper-button-prev {
-        position: relative;
-        top: 0;
-        left: 0;
-        // right: 30px;
-        // bottom: 0;
-        // top: auto;
-        // left: 85%;
-        margin-right: 20px;
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+        top: auto;
+        left: 85%;
+
 
         @include tablet-1200 {
-            // right: 80px;
-            // left: inherit;
+            right: 80px;
+            left: inherit;
         }
 
         @include mobile-450 {
-            // top: inherit;
-            // bottom: 0;
-            // right: 70px;
+            top: inherit;
+            bottom: 0;
+            right: 70px;
             width: 32px;
             height: 32px;
         }
@@ -246,19 +243,18 @@
     }
 
     &__swiper-button-next {
-        position: relative;
-        // right: 0;
-        // bottom: 0;
-        // top: auto;
-        top: 0;
+        position: absolute;
         right: 0;
-        // @include tablet-1200 {
-        //     right: 0;
-        // }
+        bottom: 0;
+        top: auto;
+
+        @include tablet-1200 {
+            right: 0;
+        }
 
         @include mobile-450 {
-            // top: inherit;
-            // bottom: 0;
+            top: inherit;
+            bottom: 0;
             width: 32px;
             height: 32px;
         }
@@ -289,18 +285,11 @@
     &__swiper-scrollbar {}
 }
 
-.swiper-button-wrapper {
-    position: relative;
-    display: block;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
 .container-main {}
 
-.swiper-container {}
+.swiper-container {
+    position: relative;
+}
 
 .swiper-wrapper {}
 
