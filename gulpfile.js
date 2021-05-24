@@ -66,8 +66,8 @@ var config = {
 	logPrefix: "PipZip"
 };
 
-gulp.task('clean', function() {
-  return del('build');
+gulp.task('clean', function () {
+	return del('build');
 });
 /*
 gulp.task('html:build', function () {
@@ -148,15 +148,15 @@ gulp.task('img:build', function () {
 		.pipe(reload({ stream: true }));
 });*/
 
-gulp.task('img', function() {
-  return gulp.src(path.src.img)
-    .pipe(newer(path.build.img))
-    .pipe(image({
-        mozjpeg: false,
-        jpegoptim: false,
-        jpegRecompress: true
-    }))
-    .pipe(gulp.dest(path.build.img))
+gulp.task('img', function () {
+	return gulp.src(path.src.img)
+		// .pipe(newer(path.build.img))
+		// .pipe(image({
+		//     mozjpeg: false,
+		//     jpegoptim: false,
+		//     jpegRecompress: true
+		// }))
+		.pipe(gulp.dest(path.build.img))
 		.pipe(reload({ stream: true }));
 });
 

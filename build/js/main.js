@@ -255,6 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('preloader').style.display = 'none';
     }
 
+
     setTimeout(disabledPreloader, 1200);
 
     $("a.fancybox").fancybox({
