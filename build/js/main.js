@@ -209,8 +209,8 @@ document.addEventListener('DOMContentLoaded', function () {
             function animationActiveSection(index, nextIndex) {
                 const anchor = anchors[index];
                 const nextAnchor = anchors[nextIndex];
-                const nextActiveSection = document.querySelector(`.section__${nextAnchor}`);
-                const activeSection = document.querySelector(`.section__${anchor}`);
+                const nextActiveSection = document.querySelector(`.section-${nextAnchor}`);
+                const activeSection = document.querySelector(`.section-${anchor}`);
 
                 if (nextActiveSection.classList.contains('active')) {
                     nextActiveSection.querySelector('.section-main').style.opacity = "1";

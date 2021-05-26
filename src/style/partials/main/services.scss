@@ -39,6 +39,10 @@
             margin-top: toVh(30);
         }
 
+        @media (max-height: 950px) {
+            margin-top: toVh(30);
+        }
+
         @include tablet-1000 {
             flex-direction: column;
         }
