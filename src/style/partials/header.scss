@@ -22,6 +22,10 @@
         justify-content: space-between;
         align-items: center;
 
+        @include tablet {
+            padding: 40px 60px;
+        }
+
         @include tablet-1200 {
             padding: 40px 60px;
         }
@@ -118,8 +122,6 @@
             &:first-child {
                 margin-right: 50px;
             }
-
-
 
             &:hover {
                 &::after {

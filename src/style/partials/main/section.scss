@@ -1,63 +1,61 @@
 .section {
-
-
-    &__home {
+    &-home {
         background-image: url("../img/bg/home.jpg");
         background-size: cover;
         background-position: 100% 22%;
         background-repeat: no-repeat;
     }
 
-    &__about {
+    &-about {
         background-image: url("../img/bg/about.jpg");
         background-size: cover;
         background-position: 100% 22%;
         background-repeat: no-repeat;
     }
 
-    &__cases {
+    &-cases {
         background-image: url("../img/bg/partners.jpg");
         background-size: cover;
         background-position: 100% 22%;
         background-repeat: no-repeat;
     }
 
-    &__contacts {
+    &-contacts {
         background-image: url("../img/bg/contacts.jpg");
         background-size: cover;
         background-position: 100% 22%;
         background-repeat: no-repeat;
     }
 
-    &__services {
+    &-services {
         background-image: url("../img/bg/services.jpg");
         background-size: cover;
         background-position: 100% 22%;
         background-repeat: no-repeat;
     }
 
-    &__partners {
+    &-partners {
         background-image: url("../img/bg/partners.jpg");
         background-size: cover;
         background-position: 100% 22%;
         background-repeat: no-repeat;
     }
 
-    &__testimonials {
+    &-testimonials {
         background-image: url("../img/bg/testimonials.jpg");
         background-size: cover;
         background-position: 100% 22%;
         background-repeat: no-repeat;
     }
 
-    &__awards {
+    &-awards {
         background-image: url("../img/bg/awards.jpg");
         background-size: cover;
         background-position: 100% 22%;
         background-repeat: no-repeat;
     }
 
-    &__blog {
+    &-blog {
         background-image: url("../img/bg/blog.jpg");
         background-size: cover;
         background-position: center;

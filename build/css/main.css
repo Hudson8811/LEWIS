@@ -208,63 +208,63 @@ body {
   2. Blocks
 -------------------------------------------------------------------------------*/
 /* 2.11 Section */
-.section__home {
+.section-home {
   background-image: url("../img/bg/home.jpg");
   background-size: cover;
   background-position: 100% 22%;
   background-repeat: no-repeat;
 }
 
-.section__about {
+.section-about {
   background-image: url("../img/bg/about.jpg");
   background-size: cover;
   background-position: 100% 22%;
   background-repeat: no-repeat;
 }
 
-.section__cases {
+.section-cases {
   background-image: url("../img/bg/partners.jpg");
   background-size: cover;
   background-position: 100% 22%;
   background-repeat: no-repeat;
 }
 
-.section__contacts {
+.section-contacts {
   background-image: url("../img/bg/contacts.jpg");
   background-size: cover;
   background-position: 100% 22%;
   background-repeat: no-repeat;
 }
 
-.section__services {
+.section-services {
   background-image: url("../img/bg/services.jpg");
   background-size: cover;
   background-position: 100% 22%;
   background-repeat: no-repeat;
 }
 
-.section__partners {
+.section-partners {
   background-image: url("../img/bg/partners.jpg");
   background-size: cover;
   background-position: 100% 22%;
   background-repeat: no-repeat;
 }
 
-.section__testimonials {
+.section-testimonials {
   background-image: url("../img/bg/testimonials.jpg");
   background-size: cover;
   background-position: 100% 22%;
   background-repeat: no-repeat;
 }
 
-.section__awards {
+.section-awards {
   background-image: url("../img/bg/awards.jpg");
   background-size: cover;
   background-position: 100% 22%;
   background-repeat: no-repeat;
 }
 
-.section__blog {
+.section-blog {
   background-image: url("../img/bg/blog.jpg");
   background-size: cover;
   background-position: center;
@@ -476,7 +476,7 @@ body {
 
 .about__img-wrapper {
   position: relative;
-  margin-top: 6.48148vh;
+  margin-top: 12.03704vh;
   height: 47.77778vh;
   overflow: hidden;
 }
@@ -589,6 +589,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-height: 950px) {
+  .services__row {
+    margin-top: 2.77778vh;
+  }
 }
 
 @media (max-height: 950px) {
@@ -982,7 +988,6 @@ body {
 
 @media (max-width: 1559px) {
   .awards__title {
-    text-align: center;
     font-size: 48px;
   }
 }
@@ -2399,6 +2404,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1559px) {
+  .header__wrapper {
+    padding: 40px 60px;
+  }
 }
 
 @media (max-width: 1200px) {
