@@ -1,5 +1,4 @@
 .services {
-
     position: relative;
 
     &__container {}
@@ -34,6 +33,7 @@
         margin-top: toVh(50);
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         @media (max-height: 950px) {
             margin-top: toVh(30);
@@ -52,10 +52,6 @@
         overflow: hidden;
         position: relative;
 
-        // @media (max-height: 950px) {
-        //     height: toVh(650);
-        // }
-
         @include tablet-1000 {
             width: 100%;
             display: flex;
@@ -71,7 +67,7 @@
         max-height: 594px;
         position: absolute;
         object-fit: cover;
-        object-position: center;
+        object-position: top;
     }
 
     &__inner {

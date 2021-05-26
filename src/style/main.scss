@@ -53,9 +53,6 @@
 /* 2.13 About */
 @import "partials/main/about.scss";
 
-/* 2.14 About video */
-@import "partials/main/about-video.scss";
-
 /* 2.15 Main bloks */
 @import "partials/main/services.scss";
 
@@ -89,3 +86,7 @@
   4. Nav widget
 -------------------------------------------------------------------------------*/
 @import "partials/nav-widget.scss";
+/*-------------------------------------------------------------------------------
+  5. Noize
+-------------------------------------------------------------------------------*/
+@import "partials/noize.scss";

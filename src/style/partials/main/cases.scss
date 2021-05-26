@@ -1,23 +1,4 @@
-// body {
-//     &:hover {
-//         .cases__row {
-//             animation-play-state: paused;
-//         }
-
-//         // .cases__row-wrapper {
-//         //     animation-play-state: paused;
-//         // }
-
-//         // @include tablet-1000 {
-//         //     .cases__row {
-//         //         animation-play-state: initial;
-//         //     }
-//         // }
-//     }
-// }
-
 .cases {
-
     position: relative;
     overflow: hidden;
 
@@ -26,50 +7,6 @@
         position: relative;
         overflow: hidden;
     }
-
-    // &__play-animation-right {
-    //     width: 400px;
-    //     height: 100vh;
-    //     position: absolute;
-    //     right: 0px;
-    //     transform: translateX(75%);
-    //     z-index: 100;
-    //     background-color: transparent;
-
-    //     &:hover {
-    //         &~.cases__container .cases__row {
-    //             animation-play-state: running;
-    //         }
-
-    //         &~.cases__container .cases__row-wrapper {
-    //             // animation-direction: reverse, alternate;
-    //             animation-play-state: paused;
-    //         }
-    //     }
-    // }
-
-    // &__play-animation-left {
-    //     width: 400px;
-    //     height: 100vh;
-    //     // background-color: red;
-    //     position: absolute;
-    //     left: 0px;
-    //     transform: translateX(-75%);
-    //     z-index: 100;
-    //     background-color: transparent;
-
-    //     &:hover {
-    //         &~.cases__container .cases__row-wrapper {
-    //             // animation-direction: reverse, alternate;
-    //             animation-play-state: running;
-    //         }
-
-    //         &~.cases__container .cases__row {
-    //             // animation-direction: reverse, alternate;
-    //             animation-play-state: paused;
-    //         }
-    //     }
-    // }
 
     &__row {
         display: flex;
@@ -90,7 +27,6 @@
             display: flex;
             flex-wrap: nowrap;
             flex: 0 0 auto;
-            // animation: runningLineWrap 10s linear infinite;
         }
     }
 

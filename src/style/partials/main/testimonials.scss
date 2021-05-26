@@ -1,8 +1,5 @@
 .testimonials {
-
     position: relative;
-
-    &__container {}
 
     &__title {
         font-family: SF Pro Display;
@@ -35,8 +32,6 @@
             font-size: 28px;
         }
     }
-
-    &__content {}
 
     &__swiper-container {
         width: 900px;
@@ -194,29 +189,15 @@
         position: relative;
     }
 
-    &__swiper-slide {}
-
-    &__swiper-pagination {}
-
     &__swiper-button-prev {
         position: relative;
         top: 0;
         left: 0;
-        // right: 30px;
-        // bottom: 0;
-        // top: auto;
-        // left: 85%;
         margin-right: 20px;
 
-        @include tablet-1200 {
-            // right: 80px;
-            // left: inherit;
-        }
+        @include tablet-1200 {}
 
         @include mobile-450 {
-            // top: inherit;
-            // bottom: 0;
-            // right: 70px;
             width: 32px;
             height: 32px;
         }
@@ -247,18 +228,10 @@
 
     &__swiper-button-next {
         position: relative;
-        // right: 0;
-        // bottom: 0;
-        // top: auto;
         top: 0;
         right: 0;
-        // @include tablet-1200 {
-        //     right: 0;
-        // }
 
         @include mobile-450 {
-            // top: inherit;
-            // bottom: 0;
             width: 32px;
             height: 32px;
         }
@@ -285,8 +258,6 @@
             }
         }
     }
-
-    &__swiper-scrollbar {}
 }
 
 .swiper-button-wrapper {
@@ -295,18 +266,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
 }
-
-.container-main {}
-
-.swiper-container {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
-
-.swiper-pagination {}
 
 .swiper-button-prev {
     width: 50px;
@@ -325,5 +285,3 @@
         content: '';
     }
 }
-
-.swiper-scrollbar {}

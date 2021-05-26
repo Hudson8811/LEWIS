@@ -1,5 +1,4 @@
 .awards {
-
     position: relative;
 
     @include tablet-1200 {
@@ -15,8 +14,6 @@
         padding-top: 80px;
         padding-left: 20px;
     }
-
-    &__container {}
 
     &__title {
         font-size: 70px;
@@ -87,10 +84,6 @@
             @include tablet-992 {
                 border-bottom-width: 0;
             }
-
-            // @include mobile {
-            //     border-bottom-width: 1px;
-            // }
         }
     }
 

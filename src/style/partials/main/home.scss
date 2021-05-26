@@ -35,14 +35,6 @@
         line-height: 110%;
         color: #F3F3F3;
 
-        // @media (max-height: 800px) {
-        //     font-size: 90px;
-        // }
-
-        // @include tablet-1200 {
-        //     font-size: 78px;
-        // }
-
         @include mobile-520 {
             font-size: 64px;
             width: 80%;

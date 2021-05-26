@@ -150,12 +150,13 @@ gulp.task('img:build', function () {
 
 gulp.task('img', function () {
 	return gulp.src(path.src.img)
-		// .pipe(newer(path.build.img))
-		// .pipe(image({
-		//     mozjpeg: false,
-		//     jpegoptim: false,
-		//     jpegRecompress: true
-		// }))
+		.pipe(newer(path.build.img))
+		.pipe(image({
+			mozjpeg: false,
+			jpegoptim: false,
+			jpegRecompress: true,
+			pngquant: false,
+		}))
 		.pipe(gulp.dest(path.build.img))
 		.pipe(reload({ stream: true }));
 });

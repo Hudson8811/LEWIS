@@ -1,5 +1,4 @@
 .section {
-
     &__home {
         background-image: url("../img/bg/home.jpg");
         background-size: cover;
@@ -53,6 +52,13 @@
         background-image: url("../img/bg/awards.jpg");
         background-size: cover;
         background-position: 100% 22%;
+        background-repeat: no-repeat;
+    }
+
+    &__blog {
+        background-image: url("../img/bg/blog.jpg");
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
 }
