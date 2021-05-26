@@ -1,4 +1,8 @@
 .section {
+    @include tablet-1000 {
+        position: relative;
+    }
+
     &__home {
         background-image: url("../img/bg/home.jpg");
         background-size: cover;

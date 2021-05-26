@@ -25,6 +25,8 @@ body {
     // transition: opacity .3s ease;
     @include tablet-1000 {
         opacity: 1;
+        position: relative;
+
     }
 
     &.active {
