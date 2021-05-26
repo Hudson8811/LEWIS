@@ -102,14 +102,14 @@ gulp.task('style:build', function () {
 	return gulp.src(path.src.style)
 		.pipe(plumber())
 		.pipe(replace(/\/\/ignorescss/g, ''))
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(sass())
 		//.pipe(gcmq())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions']
 		}))
-		.pipe(cleanCSS({ rebase: false }))
-		.pipe(sourcemaps.write('./maps'))
+		//.pipe(cleanCSS({ rebase: false }))
+		//.pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({ stream: true }));
 });
