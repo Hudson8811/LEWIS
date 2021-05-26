@@ -101,9 +101,12 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
 	return gulp.src(path.src.style)
 		.pipe(plumber())
-		.pipe(replace(/\/\/ignorescss/g, ''))
 		//.pipe(sourcemaps.init())
-		.pipe(sass())
+		.pipe(replace(/\/\/ignorescss/g, ''))
+		.pipe(sass({
+			outputStyle: 'expanded'
+		}))
+		
 		//.pipe(gcmq())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions']
