@@ -101,7 +101,7 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
 	return gulp.src(path.src.style)
 		.pipe(plumber())
-		//.pipe(sourcemaps.init())
+		.pipe(sourcemaps.init())
 		.pipe(replace(/\/\/ignorescss/g, ''))
 		.pipe(sass({
 			outputStyle: 'expanded'
@@ -112,7 +112,7 @@ gulp.task('style:build', function () {
 			browsers: ['last 2 versions']
 		}))
 		//.pipe(cleanCSS({ rebase: false }))
-		//.pipe(sourcemaps.write('./maps'))
+		.pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({ stream: true }));
 });
